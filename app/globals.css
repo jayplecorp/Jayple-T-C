@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy:           #07132A;
+  --navy-deep:      #03091A;
+  --navy-mid:       #0F2044;
+  --navy-light:     #1A3060;
+  --lime:           #C8D620;
+  --lime-dark:      #A3AD18;
+  --lime-soft:      rgba(200, 214, 32, 0.12);
+  --lime-glow:      rgba(200, 214, 32, 0.30);
+  --ease:           cubic-bezier(0.22, 1, 0.36, 1);
+  --t:              all 0.35s var(--ease);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply text-text bg-surface-off antialiased overflow-x-hidden;
+  line-height: 1.65;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { @apply bg-navy-light rounded-pill; }
+
+/* Focus visible */
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-lime;
+}
+
+/* ── Utility layer ── */
+@layer utilities {
+  .section-padding { @apply py-28 lg:py-36; }
+  .section-padding-sm { @apply py-16 lg:py-20; }
+  .container-max { @apply max-w-container mx-auto px-6 lg:px-8; }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #C8D620 0%, #E8F224 100%);
+  }
+
+  .glass {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background: rgba(7, 19, 42, 0.85);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)];
+  }
+  .card-hover:hover {
+    @apply -translate-y-1 shadow-md;
+  }
+
+  /* Lime accent border top on cards */
+  .lime-top {
+    border-top: 3px solid #C8D620;
+  }
+
+  /* Marquee container */
+  .marquee-wrap {
+    display: flex;
+    width: max-content;
+    overflow: hidden;
+  }
+
+  /* Screen-reader only */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}
+
+/* ── Reduced-motion overrides ── */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
