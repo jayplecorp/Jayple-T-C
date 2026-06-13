@@ -257,7 +257,11 @@ export default function Hero() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ ...SPRING, delay: 0.9 }}
             >
-              <span className="w-5 h-5 rounded-md bg-green-100 flex items-center justify-center text-green-600 text-[10px] font-bold">✓</span>
+              <span className="w-5 h-5 rounded-md bg-green-100 flex items-center justify-center text-green-600">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2.5} className="w-3 h-3">
+                  <polyline points="2.5 8 6.5 12 13.5 4" />
+                </svg>
+              </span>
               Instant Confirmation
             </motion.div>
 
@@ -267,7 +271,11 @@ export default function Hero() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ ...SPRING, delay: 1.1 }}
             >
-              <span className="w-5 h-5 rounded-md bg-yellow-100 flex items-center justify-center text-yellow-600 text-xs font-bold">₹</span>
+              <span className="w-5 h-5 rounded-md bg-lime/20 flex items-center justify-center text-lime-dark">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={1.75} className="w-3 h-3">
+                  <path d="M8 2v12M11 5H6.5a2.5 2.5 0 0 0 0 5H9a2.5 2.5 0 0 1 0 5H5" />
+                </svg>
+              </span>
               Cashback Wallet
             </motion.div>
           </div>
