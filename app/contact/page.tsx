@@ -59,9 +59,7 @@ export default function ContactPage() {
                 <p className="text-xs font-bold uppercase tracking-widest text-text-on-dark-muted mb-4">Follow us</p>
                 <div className="flex gap-3">
                   {[
-                    { label: 'Instagram', href: 'https://instagram.com', abbr: 'IG' },
-                    { label: 'LinkedIn',  href: 'https://linkedin.com',  abbr: 'in' },
-                    { label: 'Facebook',  href: 'https://facebook.com',  abbr: 'f'  },
+                    { label: 'Instagram', href: 'https://www.instagram.com/jayple.in/', abbr: 'IG' },
                   ].map(({ label, href, abbr }) => (
                     <a
                       key={label}

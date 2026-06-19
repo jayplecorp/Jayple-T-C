@@ -92,8 +92,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   url: 'https://jayple.in',
                   logo: 'https://jayple.in/logo.png',
                   sameAs: [
-                    'https://instagram.com/jayple',
-                    'https://linkedin.com/company/jayple',
+                    'https://www.instagram.com/jayple.in/',
                   ],
                 },
                 {
@@ -119,6 +118,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[99999] focus:px-5 focus:py-3 focus:bg-lime focus:text-navy focus:font-bold focus:rounded-md focus:shadow-lg focus:text-sm"
+        >
+          Skip to main content
+        </a>
         <ScrollProgress />
         <Navbar />
         <main id="main-content">{children}</main>

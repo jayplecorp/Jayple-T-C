@@ -12,7 +12,6 @@ import Team from '@/components/Team'
 import AppCTA from '@/components/AppCTA'
 
 export const metadata: Metadata = {
-  title: 'Jayple — Book Salon Appointments Instantly | No Waiting in Trichy',
   alternates: { canonical: 'https://jayple.in/' },
 }
 

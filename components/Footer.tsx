@@ -45,9 +45,7 @@ export default function Footer() {
             {/* Socials */}
             <div className="flex gap-3">
               {[
-                { label: 'Instagram', href: 'https://instagram.com', abbr: 'IG' },
-                { label: 'LinkedIn',  href: 'https://linkedin.com',  abbr: 'in' },
-                { label: 'Facebook',  href: 'https://facebook.com',  abbr: 'f'  },
+                { label: 'Instagram', href: 'https://www.instagram.com/jayple.in/', abbr: 'IG' },
               ].map(({ label, href, abbr }) => (
                 <a
                   key={label}

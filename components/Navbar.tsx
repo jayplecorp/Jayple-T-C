@@ -42,8 +42,9 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-brand ${
-          scrolled ? 'glass py-3' : 'bg-transparent py-5'
+          scrolled ? 'glass py-3' : 'py-5'
         }`}
+        style={!scrolled ? { background: 'linear-gradient(to bottom, rgba(3,9,26,0.85) 0%, rgba(3,9,26,0.4) 70%, transparent 100%)' } : undefined}
         aria-label="Site navigation"
       >
         <div className="container-max flex items-center justify-between gap-6">
@@ -61,7 +62,7 @@ export default function Navbar() {
               <Link
                 key={l.href}
                 href={l.href}
-                className="text-sm font-medium text-text-on-dark-soft hover:text-white transition-colors duration-200"
+                className="text-sm font-medium text-white/80 hover:text-white transition-colors duration-200"
               >
                 {l.label}
               </Link>
@@ -72,7 +73,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/partner"
-              className="px-4 py-2 text-sm font-semibold text-text-on-dark-soft border border-white/20 rounded-md hover:border-white/50 hover:text-white transition-all duration-200"
+              className="px-4 py-2 text-sm font-semibold text-white/80 border border-white/30 rounded-md hover:border-white/60 hover:text-white transition-all duration-200"
             >
               Become a Partner
             </Link>
