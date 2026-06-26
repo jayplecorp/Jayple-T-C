@@ -67,6 +67,7 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
   other: {
     'theme-color': '#07132A',
+    'apple-itunes-app': 'app-id=6779542812',
   },
 }
 
@@ -111,6 +112,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   operatingSystem: 'ANDROID, IOS',
                   applicationCategory: 'LifestyleApplication',
                   offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
+                  installUrl: 'https://apps.apple.com/in/app/jayple/id6779542812',
+                  downloadUrl: [
+                    'https://apps.apple.com/in/app/jayple/id6779542812',
+                    'https://play.google.com/store/apps/details?id=com.jayple.app',
+                  ],
                 },
               ],
             }),

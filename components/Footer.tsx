@@ -1,6 +1,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
+const APP_STORE_URL  = 'https://apps.apple.com/in/app/jayple/id6779542812'
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.jayple.app'
+
 const COMPANY_LINKS = [
   { label: 'Home',          href: '/' },
   { label: 'About',         href: '/about' },
@@ -58,6 +61,33 @@ export default function Footer() {
                   {abbr}
                 </a>
               ))}
+            </div>
+            {/* Download links */}
+            <div className="flex flex-wrap gap-2 mt-5">
+              <a
+                href={PLAY_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-white/06 border border-white/10 hover:bg-white/12 px-3.5 py-2 rounded-md transition-all duration-200"
+                aria-label="Get Jayple on Google Play"
+              >
+                <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M3.6 2.3 13 12 3.6 21.7c-.4-.2-.6-.6-.6-1.1V3.4c0-.5.2-.9.6-1.1zM14.5 13.5l2.8 2.8-9.9 5.6 7.1-8.4zm0-3L7.4 2.1l9.9 5.6-2.8 2.8zM18.6 9.1l3.1 1.8c.7.4.7 1.4 0 1.8l-3.1 1.8L15.5 12l3.1-2.9z" />
+                </svg>
+                <span className="text-xs font-semibold text-white">Google Play</span>
+              </a>
+              <a
+                href={APP_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-white/06 border border-white/10 hover:bg-white/12 px-3.5 py-2 rounded-md transition-all duration-200"
+                aria-label="Download Jayple on the App Store"
+              >
+                <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16.4 1.4c.1 1-.3 2-.9 2.8-.7.8-1.7 1.4-2.7 1.3-.1-1 .4-2 1-2.7.6-.8 1.7-1.3 2.6-1.4zM19 17.3c-.5 1.1-.7 1.6-1.3 2.6-.9 1.4-2.1 3.1-3.7 3.1-1.4 0-1.7-.9-3.6-.9-1.8 0-2.2.9-3.6.9-1.5 0-2.7-1.5-3.5-2.9C.8 16.3.5 11.9 2.2 9.6c1-1.4 2.5-2.2 4-2.2 1.5 0 2.5 1 3.7 1 1.2 0 1.9-1 3.7-1 1.3 0 2.7.7 3.7 2-3.3 1.8-2.7 6.4 1.3 7.9z" />
+                </svg>
+                <span className="text-xs font-semibold text-white">App Store</span>
+              </a>
             </div>
           </div>
 

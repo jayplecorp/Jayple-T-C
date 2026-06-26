@@ -44,6 +44,6 @@ export const SPRING = {
 }
 
 export const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.jayple.app'
-export const APP_STORE_URL  = 'https://apps.apple.com/app/id6779542812'
+export const APP_STORE_URL  = 'https://apps.apple.com/in/app/jayple/id6779542812'
 export const ANDROID_PACKAGE = 'com.jayple.app'
 export const IOS_SCHEME      = 'jayple://'
