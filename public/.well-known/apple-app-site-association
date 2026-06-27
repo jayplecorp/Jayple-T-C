@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "4R4Y26JP23.com.jayple.jayple",
+        "paths": ["*"]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["4R4Y26JP23.com.jayple.jayple"]
+  }
+}
