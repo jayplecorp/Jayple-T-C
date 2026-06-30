@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import LegalDocViewer from '@/components/LegalDocViewer'
 
 export const metadata: Metadata = {
   title: 'Cancellation & Refund Policy — Jayple',
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function RefundPolicyPage() {
   return (
-    <>
+    <LegalDocViewer>
       <h1>Cancellation &amp; Refund Policy</h1>
       <p><strong>Last updated:</strong> June 2026</p>
       <p>
@@ -112,6 +113,6 @@ export default function RefundPolicyPage() {
         <li><strong>In-app:</strong> My Bookings → select booking → &quot;Need Help?&quot;</li>
         <li><strong>Address:</strong> Jayple, Trichy (Tiruchirappalli), Tamil Nadu, India — 620 001</li>
       </ul>
-    </>
+    </LegalDocViewer>
   )
 }

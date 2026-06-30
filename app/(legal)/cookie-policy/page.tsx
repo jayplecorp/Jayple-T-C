@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import LegalDocViewer from '@/components/LegalDocViewer'
 
 export const metadata: Metadata = {
   title: 'Cookie Policy — Jayple',
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function CookiePolicyPage() {
   return (
-    <>
+    <LegalDocViewer>
       <h1>Cookie Policy</h1>
       <p><strong>Last updated:</strong> June 2026</p>
       <p>
@@ -151,6 +152,6 @@ export default function CookiePolicyPage() {
         <li><strong>Email:</strong> <a href="mailto:privacy@jayple.in">privacy@jayple.in</a></li>
         <li><strong>Address:</strong> Jayple, Trichy (Tiruchirappalli), Tamil Nadu, India — 620 001</li>
       </ul>
-    </>
+    </LegalDocViewer>
   )
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import LegalDocViewer from '@/components/LegalDocViewer'
 
 export const metadata: Metadata = {
   title: 'Vendor Privacy Policy — Jayple',
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function VendorPrivacyPage() {
   return (
-    <>
+    <LegalDocViewer>
       <h1>Vendor Privacy Policy</h1>
       <p><strong>Last updated:</strong> June 2026</p>
       <p>
@@ -79,7 +80,7 @@ export default function VendorPrivacyPage() {
       </ul>
       <p><strong>Shared with third parties:</strong></p>
       <ul>
-        <li><strong>Razorpay:</strong> Bank account details are shared with Razorpay solely for processing settlements, governed by <a href="https://razorpay.com/privacy/" target="_blank" rel="noopener noreferrer">Razorpay&apos;s Privacy Policy</a></li>
+        <li><strong>Razorpay:</strong> Bank account details are shared solely for processing settlements, governed by <a href="https://razorpay.com/privacy/" target="_blank" rel="noopener noreferrer">Razorpay&apos;s Privacy Policy</a></li>
         <li><strong>Tax authorities:</strong> Financial data shared as required by Indian tax laws</li>
         <li><strong>Legal authorities:</strong> When required by court order or government directive</li>
       </ul>
@@ -135,6 +136,6 @@ export default function VendorPrivacyPage() {
         <li><strong>Partner support:</strong> <a href="mailto:partner@jayple.in">partner@jayple.in</a></li>
         <li><strong>Address:</strong> Jayple, Trichy (Tiruchirappalli), Tamil Nadu, India — 620 001</li>
       </ul>
-    </>
+    </LegalDocViewer>
   )
 }

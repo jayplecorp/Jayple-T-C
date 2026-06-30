@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import LegalDocViewer from '@/components/LegalDocViewer'
 
 export const metadata: Metadata = {
   title: 'Partner Policy — Jayple',
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function VendorPolicyPage() {
   return (
-    <>
+    <LegalDocViewer>
       <h1>Partner Policy</h1>
       <p><strong>Last updated:</strong> June 2026</p>
       <p>
@@ -136,6 +137,6 @@ export default function VendorPolicyPage() {
         <li><strong>Email:</strong> <a href="mailto:partner@jayple.in">partner@jayple.in</a></li>
         <li><strong>Address:</strong> Jayple, Trichy (Tiruchirappalli), Tamil Nadu, India — 620 001</li>
       </ul>
-    </>
+    </LegalDocViewer>
   )
 }
