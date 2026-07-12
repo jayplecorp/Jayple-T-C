@@ -120,7 +120,7 @@ export default function VendorPolicyPage() {
         Partners can report platform issues, policy violations by customers, disputes, or concerns by contacting:
       </p>
       <ul>
-        <li><strong>Email:</strong> <a href="mailto:partner@jayple.in">partner@jayple.in</a></li>
+        <li><strong>Email:</strong> <a href="mailto:jayple.appointments@gmail.com">jayple.appointments@gmail.com</a></li>
         <li><strong>In-app:</strong> Partner App → Support → Report Issue</li>
         <li><strong>Urgent issues:</strong> Email with subject line &quot;URGENT&quot; for priority handling</li>
       </ul>
@@ -134,8 +134,8 @@ export default function VendorPolicyPage() {
       <h2>10. Contact</h2>
       <p>For questions or clarifications about this policy:</p>
       <ul>
-        <li><strong>Email:</strong> <a href="mailto:partner@jayple.in">partner@jayple.in</a></li>
-        <li><strong>Address:</strong> Jayple, Trichy (Tiruchirappalli), Tamil Nadu, India — 620 001</li>
+        <li><strong>Email:</strong> <a href="mailto:jayple.appointments@gmail.com">jayple.appointments@gmail.com</a></li>
+        <li><strong>Location:</strong> Trichy, Tamil Nadu, India (Service Availability Area)</li>
       </ul>
     </LegalDocViewer>
   )

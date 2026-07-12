@@ -36,7 +36,7 @@ export default function Team() {
             The people behind Jayple
           </h2>
           <p className="text-text-soft text-[16px] leading-relaxed">
-            A dedicated team of designers, operators and engineers scaling India's salon booking platform.
+            A dedicated team of designers, operators and engineers scaling India&apos;s salon booking platform.
           </p>
         </motion.div>
 

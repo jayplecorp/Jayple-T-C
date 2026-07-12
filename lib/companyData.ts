@@ -1,0 +1,228 @@
+export const companyData = {
+  name: 'Jayple Private Limited',
+  brandName: 'Jayple',
+  launchDate: '06 July 2026',
+  foundingYear: '2026',
+  operatingMarket: 'Trichy, Tamil Nadu, India',
+  liveCity: 'Trichy',
+  paymentProcessor: 'Razorpay',
+
+  // Verified Stats
+  stats: {
+    salonPartners: '25+',
+    servicesAvailable: '1,500+',
+    avgRating: '4.9★', // Keep if needed, but note Module 0 flags this as unverified
+  },
+
+  // App Links
+  apps: {
+    customer: {
+      android: 'https://play.google.com/store/apps/details?id=com.jayple.app',
+      ios: 'https://apps.apple.com/in/app/jayple/id6779542812',
+    },
+    partner: {
+      android: 'https://play.google.com/store/apps/details?id=com.jayple.vendor',
+      ios: '', // Not yet supplied in Module 0
+    },
+  },
+
+  // Social Links
+  socials: {
+    instagram: 'https://www.instagram.com/jayple.in/',
+  },
+
+  // Internship application form
+  internshipFormUrl: 'https://forms.gle/SekG7jywvxUsfwgF7',
+
+  // Corporate Info - updated from owner-confirmed data
+  cin: '',
+  incorporationDate: '',
+  registeredOffice: '6/18, Pandamangalam, Woraiyur, Trichy',
+  operatingOffice: 'Operating Office: Trichy, Tamil Nadu, India',
+  officialEmail: 'support.jayple@gmail.com',
+  businessEmail: 'jayple.appointments@gmail.com',
+  officialPhone: '+91 9080971093',
+  grievanceOfficerName: 'Jayaprakash',
+  grievanceOfficerDesignation: 'Founder & Grievance Officer',
+}
+
+export interface TeamMember {
+  name: string
+  role: string
+  bio: string
+  photo: string | null
+  initials: string
+}
+
+export const teamData: {
+  founders: TeamMember[]
+  leadership: TeamMember[]
+  engineering: TeamMember[]
+  marketing: TeamMember[]
+  partnerSuccess: TeamMember[]
+} = {
+  founders: [
+    {
+      name: 'Jayaprakash Thangavel',
+      role: 'Founder',
+      bio: "Leading Jayple's vision and shaping ideas into meaningful digital experiences.",
+      photo: '/images/jayaprakash.jpg',
+      initials: 'JP',
+    },
+    {
+      name: 'Allwin E',
+      role: 'Co-Founder',
+      bio: "Supporting Jayple's direction through collaboration, strategy, and a shared vision for growth.",
+      photo: null,
+      initials: 'AW',
+    },
+  ],
+  leadership: [
+    {
+      name: 'Janarthanan',
+      role: 'Chief Technology Officer (CTO)',
+      bio: "Leading Jayple's technology direction and helping shape the systems and products behind the platform.",
+      photo: null,
+      initials: 'JN',
+    },
+    {
+      name: 'Dharsan',
+      role: 'Chief Finance Officer (CFO)',
+      bio: "Supporting Jayple's financial direction and helping the company build towards responsible and sustainable growth.",
+      photo: null,
+      initials: 'DT',
+    },
+    {
+      name: 'Vidyasri R',
+      role: 'Telecalling',
+      bio: "Supporting Jayple's communication, partner coordination, and growing work culture.",
+      photo: null,
+      initials: 'VR',
+    },
+  ],
+  engineering: [
+    {
+      name: 'John Adan J R',
+      role: 'Software Developer',
+      bio: "Building and improving digital experiences across Jayple's technology platforms.",
+      photo: null,
+      initials: 'JR',
+    },
+    {
+      name: 'Abivarthan A',
+      role: 'Software Developer',
+      bio: "Turning requirements and ideas into functional solutions for the Jayple ecosystem.",
+      photo: null,
+      initials: 'AA',
+    },
+    {
+      name: 'Abdul Ajees M',
+      role: 'Software Developer',
+      bio: "Developing and improving the technology behind Jayple's digital products.",
+      photo: null,
+      initials: 'AM',
+    },
+    {
+      name: 'Ashwyn S',
+      role: 'Software Developer',
+      bio: "Contributing to the development and continuous improvement of Jayple's technology platforms.",
+      photo: null,
+      initials: 'AS',
+    },
+  ],
+  marketing: [
+    {
+      name: 'Gouthem R S',
+      role: 'Marketing Team',
+      bio: "Helping Jayple communicate, connect, and build meaningful audience relationships.",
+      photo: null,
+      initials: 'GS',
+    },
+    {
+      name: 'Karupasami S',
+      role: 'Marketing Team',
+      bio: "Contributing creative and market-focused ideas to strengthen Jayple's presence.",
+      photo: null,
+      initials: 'KS',
+    },
+  ],
+  partnerSuccess: [
+    {
+      name: 'Sanjay S',
+      role: 'Partner Success',
+      bio: "Connecting with salon businesses and supporting valuable partnerships within the Jayple network.",
+      photo: null,
+      initials: 'SS',
+    },
+    {
+      name: 'Kishore Kannan D',
+      role: 'Partner Success',
+      bio: "Supporting salon partners and helping build strong relationships across the Jayple ecosystem.",
+      photo: null,
+      initials: 'KK',
+    },
+  ],
+}
+
+export interface NavigationLink {
+  label: string
+  href: string
+  description?: string
+}
+
+export interface NavigationGroup {
+  label: string
+  items: NavigationLink[]
+}
+
+export const navigationData: NavigationGroup[] = [
+  {
+    label: 'Company',
+    items: [
+      { label: 'About Jayple', href: '/about', description: 'The story, purpose, and journey behind Jayple.' },
+      { label: 'Leadership & Team', href: '/team', description: 'Meet the founders, leadership, and people building Jayple.' },
+      { label: 'Company Information', href: '/company', description: 'Access official company identity and corporate information.' },
+    ],
+  },
+  {
+    label: 'Platform',
+    items: [
+      { label: 'For Customers', href: '/#features', description: 'Understand the Jayple customer experience.' },
+      { label: 'For Salon Partners', href: '/partner', description: 'Understand the salon partner ecosystem and how businesses grow.' },
+      { label: 'How Jayple Works', href: '/#how-it-works', description: 'Understand the digital salon discovery and booking journey.' },
+    ],
+  },
+  {
+    label: 'Careers',
+    items: [
+      { label: 'Careers at Jayple', href: '/careers', description: "Understand Jayple's work culture and opportunities." },
+      { label: 'Internships', href: '/careers#internships', description: 'Explore current remote project-based internship opportunities.' },
+    ],
+  },
+  {
+    label: 'Resources',
+    items: [
+      { label: 'Journal', href: '/blog', description: 'Insights, guides, and updates from the Jayple team.' },
+      { label: 'Security & Trust', href: '/about#security-trust', description: "Understand Jayple's approach to platform trust." },
+      { label: 'Press & Media', href: '/about#press-media', description: 'Access official company news and media resources.' },
+      { label: 'Contact', href: '/contact', description: 'Clear contact paths for customers, businesses, and queries.' },
+    ],
+  },
+]
+
+export const footerLegalLinks: NavigationLink[] = [
+  { label: 'Terms & Conditions', href: '/terms' },
+  { label: 'Privacy Policy', href: '/privacy' },
+  { label: 'Cancellation & Refund', href: '/refund-policy' },
+  { label: 'Payment Policy', href: '/payment-policy' },
+  { label: 'Cookie Policy', href: '/cookie-policy' },
+  { label: 'Vendor Terms & Conditions', href: '/vendor-terms' },
+  { label: 'Vendor Privacy Policy', href: '/vendor-privacy' },
+  { label: 'Partner Policy', href: '/vendor-policy' },
+]
+
+/** Helper function to verify if a placeholder value is verified/supplied */
+export function isVerifiedValue(value: string | undefined): boolean {
+  if (!value) return false
+  return !value.startsWith('[') && value.trim().length > 0
+}

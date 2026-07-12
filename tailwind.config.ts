@@ -36,6 +36,35 @@ const config: Config = {
           'on-dark-soft': '#C3CEDF',
           'on-dark-muted':'#8294B0',
         },
+        // Semantic corporate roles mapping
+        corp: {
+          bg: {
+            primary: 'var(--background-primary)',
+            deep: 'var(--background-deep)',
+            elevated: 'var(--background-elevated)',
+            light: 'var(--background-light)',
+            subtle: 'var(--background-subtle)',
+          },
+          surface: {
+            dark: 'var(--surface-dark)',
+            light: 'var(--surface-light)',
+            muted: 'var(--surface-muted)',
+          },
+          text: {
+            'primary-dark': 'var(--text-primary-dark)',
+            'secondary-dark': 'var(--text-secondary-dark)',
+            'primary-light': 'var(--text-primary-light)',
+            'secondary-light': 'var(--text-secondary-light)',
+          },
+          border: {
+            dark: 'var(--border-dark)',
+            light: 'var(--border-light)',
+          },
+          accent: {
+            DEFAULT: 'var(--accent)',
+            hover: 'var(--accent-hover)',
+          },
+        },
       },
       fontFamily: {
         sans:    ['var(--font-inter)', 'system-ui', 'sans-serif'],

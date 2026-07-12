@@ -120,7 +120,7 @@ export default function VendorTermsPage() {
 
       <h2>11. Termination</h2>
       <ul>
-        <li><strong>By Partner:</strong> You may terminate the partnership with 30 days&apos; written notice to <a href="mailto:partner@jayple.in">partner@jayple.in</a>. Outstanding settlements will be processed within 15 business days of termination.</li>
+        <li><strong>By Partner:</strong> You may terminate the partnership with 30 days&apos; written notice to <a href="mailto:jayple.appointments@gmail.com">jayple.appointments@gmail.com</a>. Outstanding settlements will be processed within 15 business days of termination.</li>
         <li><strong>By Jayple:</strong> Jayple may terminate the partnership immediately in cases of fraud, repeated policy violations, legal non-compliance, or behaviour that harms the platform&apos;s reputation.</li>
         <li><strong>Effect of termination:</strong> Your listing will be removed, pending settlements will be processed, and customer data must be deleted or returned.</li>
       </ul>
@@ -143,8 +143,8 @@ export default function VendorTermsPage() {
       <h2>15. Contact</h2>
       <p>For vendor-related queries:</p>
       <ul>
-        <li><strong>Email:</strong> <a href="mailto:partner@jayple.in">partner@jayple.in</a></li>
-        <li><strong>Address:</strong> Jayple, Trichy (Tiruchirappalli), Tamil Nadu, India — 620 001</li>
+        <li><strong>Email:</strong> <a href="mailto:jayple.appointments@gmail.com">jayple.appointments@gmail.com</a></li>
+        <li><strong>Location:</strong> Trichy, Tamil Nadu, India (Service Availability Area)</li>
       </ul>
     </LegalDocViewer>
   )

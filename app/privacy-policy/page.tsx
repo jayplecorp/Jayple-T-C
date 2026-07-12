@@ -117,7 +117,7 @@ export default function StandalonePrivacyPolicyPage() {
           <li><strong>Anonymised data:</strong> Aggregated, anonymised analytics data may be retained indefinitely as it cannot be linked back to you.</li>
         </ul>
         <p>
-          You may request deletion of your account and personal data at any time by emailing <a href="mailto:privacy@jayple.in">privacy@jayple.in</a> or through the app settings.
+          You may request deletion of your account and personal data at any time by emailing <a href="mailto:support.jayple@gmail.com">support.jayple@gmail.com</a> or through the app settings.
         </p>
 
         <h2>6. Your Rights Under the DPDP Act</h2>
@@ -130,7 +130,7 @@ export default function StandalonePrivacyPolicyPage() {
           <li><strong>Right to grievance redressal:</strong> File a complaint with our Grievance Officer or the Data Protection Board of India</li>
           <li><strong>Right to nominate:</strong> Nominate a person to exercise your data rights in the event of your death or incapacity</li>
         </ul>
-        <p>To exercise any of these rights, email <a href="mailto:privacy@jayple.in">privacy@jayple.in</a>. We will respond within 30 days.</p>
+        <p>To exercise any of these rights, email <a href="mailto:support.jayple@gmail.com">support.jayple@gmail.com</a>. We will respond within 30 days.</p>
 
         <h2>7. Consent &amp; Withdrawal</h2>
         <p>
@@ -138,7 +138,7 @@ export default function StandalonePrivacyPolicyPage() {
         </p>
         <ul>
           <li>Adjusting notification preferences in the app settings</li>
-          <li>Emailing <a href="mailto:privacy@jayple.in">privacy@jayple.in</a> with your withdrawal request</li>
+          <li>Emailing <a href="mailto:support.jayple@gmail.com">support.jayple@gmail.com</a> with your withdrawal request</li>
           <li>Deleting your account through the app or via email</li>
         </ul>
         <p>
@@ -147,7 +147,7 @@ export default function StandalonePrivacyPolicyPage() {
 
         <h2>8. Children&apos;s Privacy</h2>
         <p>
-          Jayple is not intended for use by individuals under the age of 18 without parental or guardian consent. We do not knowingly collect personal data from children under 18. If we become aware that we have collected data from a child without appropriate consent, we will take steps to delete that information promptly. If you believe a child has provided us with personal data, please contact us at <a href="mailto:privacy@jayple.in">privacy@jayple.in</a>.
+          Jayple is not intended for use by individuals under the age of 18 without parental or guardian consent. We do not knowingly collect personal data from children under 18. If we become aware that we have collected data from a child without appropriate consent, we will take steps to delete that information promptly. If you believe a child has provided us with personal data, please contact us at <a href="mailto:support.jayple@gmail.com">support.jayple@gmail.com</a>.
         </p>
 
         <h2>9. Cookies &amp; Tracking Technologies</h2>
@@ -197,8 +197,8 @@ export default function StandalonePrivacyPolicyPage() {
         </p>
         <ul>
           <li><strong>Name:</strong> Jayaprakash (Grievance Officer)</li>
-          <li><strong>Email:</strong> <a href="mailto:grievance@jayple.in">grievance@jayple.in</a></li>
-          <li><strong>Address:</strong> Jayple, Trichy (Tiruchirappalli), Tamil Nadu, India — 620 001</li>
+          <li><strong>Email:</strong> <a href="mailto:jayple.appointments@gmail.com">jayple.appointments@gmail.com</a></li>
+          <li><strong>Location:</strong> Trichy, Tamil Nadu, India (Service Availability Area)</li>
           <li><strong>Response time:</strong> We will acknowledge your complaint within 48 hours and resolve it within 30 days</li>
         </ul>
         <p>
@@ -208,9 +208,9 @@ export default function StandalonePrivacyPolicyPage() {
         <h2>15. Contact Us</h2>
         <p>For any privacy-related questions, requests, or concerns, contact us at:</p>
         <ul>
-          <li><strong>Data Protection Officer:</strong> <a href="mailto:privacy@jayple.in">privacy@jayple.in</a></li>
-          <li><strong>General support:</strong> <a href="mailto:support@jayple.in">support@jayple.in</a></li>
-          <li><strong>Address:</strong> Jayple, Trichy (Tiruchirappalli), Tamil Nadu, India — 620 001</li>
+          <li><strong>Data Protection Officer:</strong> <a href="mailto:support.jayple@gmail.com">support.jayple@gmail.com</a></li>
+          <li><strong>General support:</strong> <a href="mailto:support.jayple@gmail.com">support.jayple@gmail.com</a></li>
+          <li><strong>Location:</strong> Trichy, Tamil Nadu, India (Service Availability Area)</li>
         </ul>
       </article>
 

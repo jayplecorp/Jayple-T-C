@@ -13,7 +13,26 @@
   --lime-glow:      rgba(200, 214, 32, 0.30);
   --ease:           cubic-bezier(0.22, 1, 0.36, 1);
   --t:              all 0.35s var(--ease);
+
+  /* Semantic UI Tokens */
+  --background-primary:     #03091A;
+  --background-deep:        #03091A;
+  --background-elevated:    #0F2044;
+  --background-light:       #FFFFFF;
+  --background-subtle:      #F6F8FC;
+  --surface-dark:           #0F2044;
+  --surface-light:          #FFFFFF;
+  --surface-muted:          #EEF2F8;
+  --text-primary-dark:      #FFFFFF;
+  --text-secondary-dark:    #C3CEDF;
+  --text-primary-light:     #0B1B36;
+  --text-secondary-light:    #5A6882;
+  --border-dark:            rgba(255, 255, 255, 0.08);
+  --border-light:           #E2E8F4;
+  --accent:                 #C8D620;
+  --accent-hover:           #E8F224;
 }
+
 
 * {
   box-sizing: border-box;

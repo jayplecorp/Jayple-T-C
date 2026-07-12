@@ -42,7 +42,7 @@ export default function RefundPolicyPage() {
 
       <h2>3. Cancellation Due to Unforeseen Circumstances</h2>
       <p>
-        In cases of genuine emergencies (medical emergency, natural disaster, or other force majeure events), please contact us at <a href="mailto:support@jayple.in">support@jayple.in</a> with relevant details. We will review your case on an individual basis and may offer a full or partial refund at our discretion.
+        In cases of genuine emergencies (medical emergency, natural disaster, or other force majeure events), please contact us at <a href="mailto:support.jayple@gmail.com">support.jayple@gmail.com</a> with relevant details. We will review your case on an individual basis and may offer a full or partial refund at our discretion.
       </p>
 
       <h2>4. No-Show Policy</h2>
@@ -70,17 +70,17 @@ export default function RefundPolicyPage() {
         <li><strong>Credit / Debit Cards:</strong> 5–7 business days (subject to your bank&apos;s processing time).</li>
       </ul>
       <p>
-        All refunds are processed through <strong>Razorpay</strong>. If you do not receive your refund within the stated timeline, please check with your bank first, then contact us at <a href="mailto:support@jayple.in">support@jayple.in</a> with your booking ID and transaction reference.
+        All refunds are processed through <strong>Razorpay</strong>. If you do not receive your refund within the stated timeline, please check with your bank first, then contact us at <a href="mailto:support.jayple@gmail.com">support.jayple@gmail.com</a> with your booking ID and transaction reference.
       </p>
 
       <h2>7. Partial Service Completion</h2>
       <p>
-        If a salon partner is unable to complete the full service after it has begun (e.g., equipment failure, stylist emergency), you may be eligible for a partial refund. Please report the issue within 24 hours of your appointment by contacting <a href="mailto:support@jayple.in">support@jayple.in</a> with your booking ID and a description of the issue.
+        If a salon partner is unable to complete the full service after it has begun (e.g., equipment failure, stylist emergency), you may be eligible for a partial refund. Please report the issue within 24 hours of your appointment by contacting <a href="mailto:support.jayple@gmail.com">support.jayple@gmail.com</a> with your booking ID and a description of the issue.
       </p>
 
       <h2>8. Service Quality Complaints</h2>
       <p>
-        If you are dissatisfied with the quality of service received, please contact us at <a href="mailto:support@jayple.in">support@jayple.in</a> within <strong>24 hours</strong> of your appointment. Provide your booking ID and details of the issue.
+        If you are dissatisfied with the quality of service received, please contact us at <a href="mailto:support.jayple@gmail.com">support.jayple@gmail.com</a> within <strong>24 hours</strong> of your appointment. Provide your booking ID and details of the issue.
       </p>
       <p>We will:</p>
       <ul>
@@ -109,9 +109,9 @@ export default function RefundPolicyPage() {
       <h2>11. Contact Us</h2>
       <p>For cancellation or refund queries, reach us at:</p>
       <ul>
-        <li><strong>Email:</strong> <a href="mailto:support@jayple.in">support@jayple.in</a></li>
+        <li><strong>Email:</strong> <a href="mailto:support.jayple@gmail.com">support.jayple@gmail.com</a></li>
         <li><strong>In-app:</strong> My Bookings → select booking → &quot;Need Help?&quot;</li>
-        <li><strong>Address:</strong> Jayple, Trichy (Tiruchirappalli), Tamil Nadu, India — 620 001</li>
+        <li><strong>Location:</strong> Trichy, Tamil Nadu, India (Service Availability Area)</li>
       </ul>
     </LegalDocViewer>
   )

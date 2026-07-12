@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
+import { companyData } from '@/lib/companyData'
 
 export const metadata: Metadata = {
   title: 'Contact Jayple — Get in Touch',
@@ -20,43 +22,88 @@ export default function ContactPage() {
       </section>
 
       <section className="section-padding bg-surface">
-        <div className="container-max max-w-3xl mx-auto grid md:grid-cols-2 gap-10">
+        <div className="container-max max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
           {/* Contact cards */}
           <div className="space-y-5">
             {[
-              { icon: '💼', title: 'Partner Enquiries', email: 'partner@jayple.in',  desc: 'Want to list your salon? We onboard within 48 hours.' },
-              { icon: '🎧', title: 'Customer Support',  email: 'support@jayple.in',  desc: 'Booking issues, refunds, or app help.' },
-              { icon: '📰', title: 'Press & Media',     email: 'press@jayple.in',    desc: 'Media kit, interviews, and brand assets.' },
-              { icon: '💼', title: 'Careers',           email: 'careers@jayple.in',  desc: 'Interested in joining the Jayple team?' },
-            ].map(({ icon, title, email, desc }) => (
-              <div key={title} className="bg-surface-off border border-surface-border rounded-md p-5 flex gap-4">
-                <div className="text-2xl shrink-0">{icon}</div>
-                <div>
-                  <h3 className="font-bold text-[15px] text-text mb-0.5">{title}</h3>
-                  <a href={`mailto:${email}`} className="text-lime-dark font-semibold text-sm hover:underline">{email}</a>
-                  <p className="text-text-muted text-sm mt-1">{desc}</p>
+              {
+                icon: '🎧',
+                title: 'Customer Support',
+                email: companyData.officialEmail,
+                desc: 'Get help with your customer account setup, booking inquiries, or refund requests.',
+                action: { label: 'Email Support', href: `mailto:${companyData.officialEmail}` }
+              },
+              {
+                icon: '💈',
+                title: 'Salon Partner Enquiries',
+                email: companyData.businessEmail,
+                desc: 'Find out how to list your salon treatments and coordinate calendars on our platform.',
+                action: { label: 'Email Partner Success', href: `mailto:${companyData.businessEmail}` }
+              },
+              {
+                icon: '✉️',
+                title: 'General & Media Queries',
+                email: companyData.businessEmail,
+                desc: 'For business collaborations, official correspondence, or press/media inquiries.',
+                action: { label: 'Email General Inbox', href: `mailto:${companyData.businessEmail}` }
+              },
+            ].map(({ icon, title, desc, action }) => (
+              <div key={title} className="bg-white border border-surface-border rounded-2xl p-6 flex gap-4">
+                <div className="text-3xl shrink-0" aria-hidden="true">{icon}</div>
+                <div className="flex flex-col justify-between">
+                  <div>
+                    <h3 className="font-display font-bold text-base text-navy mb-1">{title}</h3>
+                    <p className="text-text-soft text-xs sm:text-sm leading-relaxed mb-4">{desc}</p>
+                  </div>
+                  <a
+                    href={action.href}
+                    className="inline-flex items-center text-xs font-bold text-lime-dark hover:text-lime-dark/80 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded-sm w-fit"
+                  >
+                    {action.label} <span className="transition-transform group-hover:translate-x-1 ml-1">→</span>
+                  </a>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Address / social */}
-          <div>
-            <div className="bg-navy rounded-xl p-7 text-white h-full">
-              <h3 className="font-display text-xl font-bold mb-4">Jayple HQ</h3>
+          {/* Service Availability / Careers / Social */}
+          <div className="space-y-6">
+            <div className="bg-navy rounded-2xl p-7 sm:p-8 text-white">
+              <h3 className="font-display text-xl font-bold mb-4">Service Availability</h3>
               <p className="text-text-on-dark-soft text-sm leading-relaxed mb-6">
-                Trichy (Tiruchirappalli), Tamil Nadu, India
+                Our digital salon booking and discovery ecosystem is currently live and active in Trichy (Tiruchirappalli), Tamil Nadu, India.
               </p>
-              <div className="space-y-3">
-                <div className="flex items-center gap-2 text-sm text-text-on-dark-soft">
-                  <span className="text-lime">✉️</span> hello@jayple.in
+              
+              <div className="space-y-4 border-t border-white/10 pt-6">
+                <div className="flex items-center gap-3 text-sm text-text-on-dark-soft">
+                  <span className="text-lime" aria-hidden="true">✉️</span> 
+                  <span>{companyData.businessEmail}</span>
                 </div>
-                <div className="flex items-center gap-2 text-sm text-text-on-dark-soft">
-                  <span className="text-lime">📍</span> Trichy, Tamil Nadu 620 001
+                <div className="flex items-center gap-3 text-sm text-text-on-dark-soft">
+                  <span className="text-lime" aria-hidden="true">📞</span> 
+                  <span>{companyData.officialPhone}</span>
+                </div>
+                <div className="flex items-start gap-3 text-sm text-text-on-dark-soft">
+                  <span className="text-lime" aria-hidden="true">📍</span> 
+                  <span>Current Service Market: Trichy, Tamil Nadu</span>
                 </div>
               </div>
-              <div className="border-t border-white/08 mt-6 pt-6">
-                <p className="text-xs font-bold uppercase tracking-widest text-text-on-dark-muted mb-4">Follow us</p>
+
+              <div className="border-t border-white/10 mt-6 pt-6">
+                <h4 className="text-xs font-bold uppercase tracking-widest text-text-on-dark-muted mb-4">Careers &amp; Internships</h4>
+                <p className="text-xs text-text-on-dark-soft/90 leading-relaxed mb-4">
+                  Interested in remote, project-based internship opportunities at Jayple? View active openings and submit your application through our Careers section.
+                </p>
+                <Link
+                  href="/careers"
+                  className="inline-flex items-center text-xs font-bold text-lime hover:text-lime-bright focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-2 focus-visible:ring-offset-navy rounded-sm"
+                >
+                  Explore Careers &amp; Internships →
+                </Link>
+              </div>
+
+              <div className="border-t border-white/10 mt-6 pt-6">
+                <h4 className="text-xs font-bold uppercase tracking-widest text-text-on-dark-muted mb-4">Follow us</h4>
                 <div className="flex gap-3">
                   {[
                     { label: 'Instagram', href: 'https://www.instagram.com/jayple.in/', abbr: 'IG' },
@@ -64,7 +111,7 @@ export default function ContactPage() {
                     <a
                       key={label}
                       href={href}
-                      className="w-9 h-9 bg-white/06 border border-white/10 rounded-md flex items-center justify-center text-xs font-bold text-text-on-dark-muted hover:bg-lime hover:text-navy transition-all"
+                      className="w-9 h-9 bg-white/06 border border-white/10 rounded-md flex items-center justify-center text-xs font-bold text-text-on-dark-muted hover:bg-lime hover:text-navy transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime"
                       aria-label={label}
                       target="_blank"
                       rel="noopener noreferrer"

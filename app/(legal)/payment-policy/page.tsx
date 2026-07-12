@@ -74,7 +74,7 @@ export default function PaymentPolicyPage() {
       <ul>
         <li><strong>No deduction:</strong> If the amount was not deducted from your account, simply retry the payment.</li>
         <li><strong>Deducted but not confirmed:</strong> If the amount was deducted but the booking was not confirmed, the amount will be automatically refunded within 5–7 business days. No action is needed from your end.</li>
-        <li><strong>Duplicate charges:</strong> If you notice a duplicate charge, contact <a href="mailto:support@jayple.in">support@jayple.in</a> with your transaction ID. We will investigate and issue a refund within 3–5 business days if a duplicate charge is confirmed.</li>
+        <li><strong>Duplicate charges:</strong> If you notice a duplicate charge, contact <a href="mailto:support.jayple@gmail.com">support.jayple@gmail.com</a> with your transaction ID. We will investigate and issue a refund within 3–5 business days if a duplicate charge is confirmed.</li>
       </ul>
 
       <h2>7. Currency</h2>
@@ -89,7 +89,7 @@ export default function PaymentPolicyPage() {
 
       <h2>9. Chargebacks &amp; Disputes</h2>
       <p>
-        If you initiate a chargeback with your bank or card issuer for a legitimate Jayple transaction, we may need to temporarily suspend your account while we investigate. Please contact us at <a href="mailto:support@jayple.in">support@jayple.in</a> before initiating a chargeback so we can resolve the issue directly and faster.
+        If you initiate a chargeback with your bank or card issuer for a legitimate Jayple transaction, we may need to temporarily suspend your account while we investigate. Please contact us at <a href="mailto:support.jayple@gmail.com">support.jayple@gmail.com</a> before initiating a chargeback so we can resolve the issue directly and faster.
       </p>
 
       <h2>10. Changes to This Policy</h2>
@@ -100,9 +100,9 @@ export default function PaymentPolicyPage() {
       <h2>11. Contact Us</h2>
       <p>For payment-related queries or issues:</p>
       <ul>
-        <li><strong>Email:</strong> <a href="mailto:support@jayple.in">support@jayple.in</a></li>
+        <li><strong>Email:</strong> <a href="mailto:support.jayple@gmail.com">support.jayple@gmail.com</a></li>
         <li><strong>In-app:</strong> Profile → Help &amp; Support → Payment Issues</li>
-        <li><strong>Address:</strong> Jayple, Trichy (Tiruchirappalli), Tamil Nadu, India — 620 001</li>
+        <li><strong>Location:</strong> Trichy, Tamil Nadu, India (Service Availability Area)</li>
       </ul>
     </LegalDocViewer>
   )

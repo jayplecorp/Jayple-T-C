@@ -114,13 +114,13 @@ export default function VendorPrivacyPage() {
         <li><strong>Withdraw consent:</strong> Withdraw consent for non-essential data processing (note: this may affect your ability to remain on the platform)</li>
         <li><strong>Grievance redressal:</strong> File a complaint with our Grievance Officer or the Data Protection Board of India</li>
       </ul>
-      <p>To exercise any of these rights, email <a href="mailto:privacy@jayple.in">privacy@jayple.in</a> with your registered business name and details.</p>
+      <p>To exercise any of these rights, email <a href="mailto:support.jayple@gmail.com">support.jayple@gmail.com</a> with your registered business name and details.</p>
 
       <h2>7. Grievance Officer</h2>
       <p>For vendor data-related complaints:</p>
       <ul>
         <li><strong>Name:</strong> Jayaprakash (Grievance Officer)</li>
-        <li><strong>Email:</strong> <a href="mailto:grievance@jayple.in">grievance@jayple.in</a></li>
+        <li><strong>Email:</strong> <a href="mailto:jayple.appointments@gmail.com">jayple.appointments@gmail.com</a></li>
         <li><strong>Response time:</strong> Acknowledgement within 48 hours, resolution within 30 days</li>
       </ul>
 
@@ -132,9 +132,9 @@ export default function VendorPrivacyPage() {
       <h2>9. Contact</h2>
       <p>For privacy-related queries:</p>
       <ul>
-        <li><strong>Email:</strong> <a href="mailto:privacy@jayple.in">privacy@jayple.in</a></li>
-        <li><strong>Partner support:</strong> <a href="mailto:partner@jayple.in">partner@jayple.in</a></li>
-        <li><strong>Address:</strong> Jayple, Trichy (Tiruchirappalli), Tamil Nadu, India — 620 001</li>
+        <li><strong>Email:</strong> <a href="mailto:support.jayple@gmail.com">support.jayple@gmail.com</a></li>
+        <li><strong>Partner support:</strong> <a href="mailto:jayple.appointments@gmail.com">jayple.appointments@gmail.com</a></li>
+        <li><strong>Location:</strong> Trichy, Tamil Nadu, India (Service Availability Area)</li>
       </ul>
     </LegalDocViewer>
   )

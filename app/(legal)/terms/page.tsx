@@ -39,7 +39,7 @@ export default function TermsPage() {
         <li>Provide accurate, current, and complete information during registration</li>
         <li>Maintain and update your information to keep it accurate and current</li>
         <li>Maintain the confidentiality of your account credentials (phone number, OTP, password)</li>
-        <li>Notify us immediately at <a href="mailto:support@jayple.in">support@jayple.in</a> of any unauthorised use of your account</li>
+        <li>Notify us immediately at <a href="mailto:support.jayple@gmail.com">support.jayple@gmail.com</a> of any unauthorised use of your account</li>
         <li>Accept responsibility for all activities that occur under your account</li>
       </ul>
       <p>
@@ -166,7 +166,7 @@ export default function TermsPage() {
         <li>You have excessive no-shows or cancellations</li>
       </ul>
       <p>
-        You may also delete your account at any time through the app settings or by emailing <a href="mailto:support@jayple.in">support@jayple.in</a>. Upon deletion, any remaining Jayple Wallet balance will be forfeited after a 30-day grace period.
+        You may also delete your account at any time through the app settings or by emailing <a href="mailto:support.jayple@gmail.com">support.jayple@gmail.com</a>. Upon deletion, any remaining Jayple Wallet balance will be forfeited after a 30-day grace period.
       </p>
 
       <h2>15. Dispute Resolution</h2>
@@ -202,8 +202,8 @@ export default function TermsPage() {
       <h2>20. Contact Us</h2>
       <p>For questions, concerns, or requests related to these Terms, contact us at:</p>
       <ul>
-        <li><strong>Email:</strong> <a href="mailto:legal@jayple.in">legal@jayple.in</a></li>
-        <li><strong>Address:</strong> Jayple, Trichy (Tiruchirappalli), Tamil Nadu, India — 620 001</li>
+        <li><strong>Email:</strong> <a href="mailto:support.jayple@gmail.com">support.jayple@gmail.com</a></li>
+        <li><strong>Location:</strong> Trichy, Tamil Nadu, India (Service Availability Area)</li>
       </ul>
     </LegalDocViewer>
   )
