@@ -33,8 +33,8 @@ const POSTS = [
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen bg-surface-off pt-20">
-      <section className="bg-hero-gradient section-padding">
+    <div className="min-h-screen bg-surface-off">
+      <section className="bg-hero-gradient pt-32 pb-20 lg:pt-40 lg:pb-28">
         <div className="container-max text-center">
           <span className="text-xs font-bold uppercase tracking-widest text-lime/70 mb-4 block">Journal</span>
           <h1 className="font-display text-display-xl text-white mb-5">The Jayple Blog</h1>

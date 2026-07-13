@@ -6,10 +6,8 @@ import Link from 'next/link'
 import { fadeUp, staggerContainer, TRANSITION_DEFAULT } from '@/lib/tokens'
 
 const MEMBERS = [
-  { name: 'Jayaprakash',  role: 'Product Lead',       photo: '/images/jayaprakash.jpg', initials: 'JP' },
-  { name: 'Allwin',       role: 'Operations Lead',     photo: null,                      initials: 'AW' },
-  { name: 'Janarthanan',  role: 'Backend Architect',   photo: null,                      initials: 'JN' },
-  { name: 'Gouthem',      role: 'Growth Specialist',   photo: null,                      initials: 'GT' },
+  { name: 'Jayaprakash',  role: 'Product Lead',       photo: '/images/team/jayaprakash.webp', initials: 'JP' },
+  { name: 'Allwin',       role: 'Operations Lead',     photo: '/images/team/allwin.webp',                      initials: 'AW' },
 ]
 
 const AVATARCOLORS = [

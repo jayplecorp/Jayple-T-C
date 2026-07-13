@@ -63,7 +63,7 @@ export default function AboutProblem() {
             >
               <div className="relative rounded-xl overflow-hidden aspect-[4/3] mb-5 bg-surface-warm border border-surface-border">
                 <Image
-                  src="/images/jayaprakash.jpg"
+                  src="/images/team/jayaprakash.webp"
                   alt="Founder Jayaprakash Thangavel"
                   width={600}
                   height={450}

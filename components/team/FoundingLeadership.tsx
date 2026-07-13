@@ -11,7 +11,7 @@ export default function FoundingLeadership() {
     name: 'Jayaprakash Thangavel',
     role: 'Founder',
     bio: "Leading Jayple's vision and shaping ideas into meaningful digital experiences.",
-    photo: '/images/jayaprakash.jpg',
+    photo: '/images/team/jayaprakash.webp',
     initials: 'JP'
   }
   
@@ -19,7 +19,7 @@ export default function FoundingLeadership() {
     name: 'Allwin E',
     role: 'Co-Founder',
     bio: "Supporting Jayple's direction through collaboration, strategy, and a shared vision for growth.",
-    photo: null,
+    photo: '/images/team/allwin.webp',
     initials: 'AW'
   }
 
@@ -61,9 +61,9 @@ export default function FoundingLeadership() {
             className="flex flex-col bg-surface-off border border-surface-border rounded-2xl p-6 sm:p-8"
           >
             {/* Portrait Image Container */}
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden mb-6 bg-surface-warm border border-surface-border shrink-0">
+            <div className="relative w-3/4 aspect-square rounded-xl overflow-hidden mb-6 bg-surface-warm border border-surface-border shrink-0 mx-auto">
               <Image
-                src={founder.photo || '/images/jayaprakash.jpg'}
+                src={founder.photo || '/images/team/jayaprakash.webp'}
                 alt="Jayaprakash Thangavel, Founder of Jayple"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -97,19 +97,31 @@ export default function FoundingLeadership() {
             transition={{ ...TRANSITION_DEFAULT, delay: 0.15 }}
             className="flex flex-col bg-surface-off border border-surface-border rounded-2xl p-6 sm:p-8"
           >
-            {/* Initials Fallback Container - Styled with identical visual weight */}
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden mb-6 bg-gradient-to-br from-navy-mid to-navy border border-surface-border flex flex-col items-center justify-center shrink-0">
-              <div 
-                className="absolute inset-0 pointer-events-none opacity-10" 
-                aria-hidden="true" 
-                style={{
-                  backgroundImage: 'radial-gradient(circle 120px at 50% 50%, var(--accent) 0%, transparent 60%)'
-                }}
-              />
-              <span className="font-display font-extrabold text-5xl sm:text-6xl text-lime relative z-10 select-none">
-                {coFounder.initials}
-              </span>
-            </div>
+            {/* Portrait Image Container or Initials Fallback */}
+            {coFounder.photo ? (
+              <div className="relative w-3/4 aspect-square rounded-xl overflow-hidden mb-6 bg-surface-warm border border-surface-border shrink-0 mx-auto">
+                <Image
+                  src={coFounder.photo}
+                  alt={`${coFounder.name}, Co-Founder of Jayple`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-center"
+                />
+              </div>
+            ) : (
+              <div className="relative w-3/4 aspect-square rounded-xl overflow-hidden mb-6 bg-gradient-to-br from-navy-mid to-navy border border-surface-border flex flex-col items-center justify-center shrink-0 mx-auto">
+                <div 
+                  className="absolute inset-0 pointer-events-none opacity-10" 
+                  aria-hidden="true" 
+                  style={{
+                    backgroundImage: 'radial-gradient(circle 120px at 50% 50%, var(--accent) 0%, transparent 60%)'
+                  }}
+                />
+                <span className="font-display font-extrabold text-5xl sm:text-6xl text-lime relative z-10 select-none">
+                  {coFounder.initials}
+                </span>
+              </div>
+            )}
 
             {/* Details */}
             <div className="flex-1 flex flex-col justify-between">

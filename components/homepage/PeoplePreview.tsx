@@ -57,7 +57,6 @@ export default function PeoplePreview() {
         {/* Founders Profiles */}
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           {founders.map((member, index) => {
-            const hasImage = member.name.toLowerCase().includes('jayaprakash')
             return (
               <motion.div
                 key={member.name}
@@ -70,9 +69,9 @@ export default function PeoplePreview() {
               >
                 {/* Image / Avatar fallback */}
                 <div className="w-20 h-20 rounded-full overflow-hidden shrink-0 bg-surface-warm border border-surface-border flex items-center justify-center">
-                  {hasImage ? (
+                  {member.photo ? (
                     <img
-                      src="/images/jayaprakash.jpg"
+                      src={member.photo}
                       alt={member.name}
                       className="w-full h-full object-cover"
                     />

@@ -1,23 +1,31 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { fadeUp, staggerContainer, TRANSITION_DEFAULT } from '@/lib/tokens'
 import { teamData } from '@/lib/companyData'
 
 export default function ExecutiveAndTeam() {
   const cto = teamData.leadership.find(m => m.role.includes('Technology')) || {
-    name: 'Janarthanan',
+    name: 'Janarthanan A',
     role: 'Chief Technology Officer (CTO)',
     bio: "Leading Jayple's technology direction and helping shape the systems and products behind the platform.",
-    initials: 'JN'
+    initials: 'JA'
   }
 
   const cfo = teamData.leadership.find(m => m.role.includes('Finance')) || {
-    name: 'Dharsan',
+    name: 'Dharsan Thangarasu',
     role: 'Chief Finance Officer (CFO)',
     bio: "Supporting Jayple's financial direction and helping the company build towards responsible and sustainable growth.",
     initials: 'DT'
+  }
+
+  const hr = teamData.leadership.find(m => m.role.includes('HR')) || {
+    name: 'Vidyasri R',
+    role: 'HR',
+    bio: "Supporting Jayple's communication, partner coordination, and growing work culture.",
+    initials: 'VR'
   }
 
   // Get active department groups, filtering out founders and CTO/CFO from the general list
@@ -26,7 +34,7 @@ export default function ExecutiveAndTeam() {
   const partnerSuccess = teamData.partnerSuccess || []
   
   // Find telecalling members (e.g. Vidyasri R is in leadership array in companyData with 'Telecalling' role)
-  const telecalling = teamData.leadership.filter(m => m.role === 'Telecalling') || []
+  const telecalling = teamData.leadership.filter(m => m.role.includes('Telecalling')) || []
 
   const departments = [
     {
@@ -74,16 +82,16 @@ export default function ExecutiveAndTeam() {
                 Executive Leadership
               </span>
               <h2 id="exec-heading" className="font-display font-extrabold text-[28px] sm:text-[36px] text-navy leading-tight tracking-tight mb-6">
-                Leadership across technology and finance.
+                Leadership across technology, finance, and human resources.
               </h2>
               <p className="text-base sm:text-lg text-text-soft leading-relaxed">
-                As Jayple develops, operational responsibilities are coordinated through dedicated functions. Technology design and financial modeling are directed by officers focused on building scalable, responsible company foundations.
+                As Jayple develops, operational responsibilities are coordinated through dedicated functions. Technology design, financial modeling, and people operations are directed by officers and leads focused on building scalable, responsible company foundations.
               </p>
             </motion.div>
           </div>
 
-          {/* CTO / CFO Grid */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+          {/* Executive Leadership Grid */}
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
             
             {/* CTO Card */}
             <motion.div
@@ -94,12 +102,23 @@ export default function ExecutiveAndTeam() {
               transition={TRANSITION_DEFAULT}
               className="bg-white border border-surface-border rounded-2xl p-6 sm:p-8 flex flex-col items-start"
             >
-              {/* Premium Initials Avatar Fallback */}
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-navy to-navy-mid border border-surface-border flex items-center justify-center mb-6 shrink-0">
-                <span className="font-display font-extrabold text-xl text-lime select-none">
-                  {cto.initials}
-                </span>
-              </div>
+              {/* Photo or Premium Initials Avatar Fallback */}
+              {cto.photo ? (
+                <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-6 bg-surface-warm border border-surface-border shrink-0">
+                  <Image
+                    src={cto.photo}
+                    alt={`${cto.name}`}
+                    fill
+                    className="object-cover object-center"
+                  />
+                </div>
+              ) : (
+                <div className="relative w-full aspect-square rounded-xl bg-gradient-to-br from-navy to-navy-mid border border-surface-border flex items-center justify-center mb-6 shrink-0">
+                  <span className="font-display font-extrabold text-5xl sm:text-6xl text-lime select-none">
+                    {cto.initials}
+                  </span>
+                </div>
+              )}
               <span className="text-[10px] font-bold text-lime-dark uppercase tracking-widest block mb-1">
                 Chief Technology Officer · CTO
               </span>
@@ -120,12 +139,23 @@ export default function ExecutiveAndTeam() {
               transition={{ ...TRANSITION_DEFAULT, delay: 0.15 }}
               className="bg-white border border-surface-border rounded-2xl p-6 sm:p-8 flex flex-col items-start"
             >
-              {/* Premium Initials Avatar Fallback */}
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-navy to-navy-mid border border-surface-border flex items-center justify-center mb-6 shrink-0">
-                <span className="font-display font-extrabold text-xl text-lime select-none">
-                  {cfo.initials}
-                </span>
-              </div>
+              {/* Photo or Premium Initials Avatar Fallback */}
+              {cfo.photo ? (
+                <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-6 bg-surface-warm border border-surface-border shrink-0">
+                  <Image
+                    src={cfo.photo}
+                    alt={`${cfo.name}`}
+                    fill
+                    className="object-cover object-center"
+                  />
+                </div>
+              ) : (
+                <div className="relative w-full aspect-square rounded-xl bg-gradient-to-br from-navy to-navy-mid border border-surface-border flex items-center justify-center mb-6 shrink-0">
+                  <span className="font-display font-extrabold text-5xl sm:text-6xl text-lime select-none">
+                    {cfo.initials}
+                  </span>
+                </div>
+              )}
               <span className="text-[10px] font-bold text-lime-dark uppercase tracking-widest block mb-1">
                 Chief Finance Officer · CFO
               </span>
@@ -134,6 +164,43 @@ export default function ExecutiveAndTeam() {
               </h3>
               <p className="text-sm text-text-soft leading-relaxed flex-1">
                 {cfo.bio}
+              </p>
+            </motion.div>
+
+            {/* HR Card */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: '-60px' }}
+              variants={fadeUp}
+              transition={{ ...TRANSITION_DEFAULT, delay: 0.3 }}
+              className="bg-white border border-surface-border rounded-2xl p-6 sm:p-8 flex flex-col items-start"
+            >
+              {/* Photo or Premium Initials Avatar Fallback */}
+              {hr.photo ? (
+                <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-6 bg-surface-warm border border-surface-border shrink-0">
+                  <Image
+                    src={hr.photo}
+                    alt={`${hr.name}`}
+                    fill
+                    className="object-cover object-center"
+                  />
+                </div>
+              ) : (
+                <div className="relative w-full aspect-square rounded-xl bg-gradient-to-br from-navy to-navy-mid border border-surface-border flex items-center justify-center mb-6 shrink-0">
+                  <span className="font-display font-extrabold text-5xl sm:text-6xl text-lime select-none">
+                    {hr.initials}
+                  </span>
+                </div>
+              )}
+              <span className="text-[10px] font-bold text-lime-dark uppercase tracking-widest block mb-1">
+                Human Resources · HR
+              </span>
+              <h3 className="font-display font-bold text-xl text-navy mb-4">
+                {hr.name}
+              </h3>
+              <p className="text-sm text-text-soft leading-relaxed flex-1">
+                {hr.bio}
               </p>
             </motion.div>
 
@@ -209,17 +276,29 @@ export default function ExecutiveAndTeam() {
                             key={member.name}
                             variants={fadeUp}
                             transition={TRANSITION_DEFAULT}
-                            className="bg-surface-off border border-surface-border rounded-xl p-5 flex items-center gap-4 hover:border-lime/40 transition-colors"
+                            className="bg-surface-off border border-surface-border rounded-2xl p-6 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-5 hover:border-lime/40 transition-colors"
                           >
-                            {/* Initials Fallback Avatar */}
-                            <div className="w-12 h-12 rounded-lg bg-navy/5 border border-surface-border flex items-center justify-center font-display font-extrabold text-sm text-navy shrink-0 select-none">
-                              {derivedInitials}
-                            </div>
+                            {/* Photo or Initials Fallback Avatar */}
+                            {member.photo ? (
+                              <div className="relative w-32 h-32 rounded-2xl overflow-hidden border border-surface-border shrink-0 bg-surface-warm">
+                                <Image
+                                  src={member.photo}
+                                  alt={member.name}
+                                  fill
+                                  sizes="128px"
+                                  className="object-cover object-center"
+                                />
+                              </div>
+                            ) : (
+                              <div className="w-32 h-32 rounded-2xl bg-navy/5 border border-surface-border flex items-center justify-center font-display font-extrabold text-4xl text-navy shrink-0 select-none">
+                                {derivedInitials}
+                              </div>
+                            )}
                             <div className="min-w-0">
-                              <h4 className="font-bold text-[15px] text-navy truncate">
+                              <h4 className="font-bold text-[17px] text-navy truncate">
                                 {member.name}
                               </h4>
-                              <p className="text-xs text-text-soft mt-0.5">
+                              <p className="text-xs sm:text-sm text-text-soft mt-1">
                                 {member.role}
                               </p>
                             </div>

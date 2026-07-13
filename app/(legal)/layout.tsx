@@ -53,7 +53,7 @@ function LegalHeader() {
   const pageTitle = current?.label || 'Legal & Policies'
 
   return (
-    <div className="bg-hero-gradient section-padding-sm">
+    <div className="bg-hero-gradient pt-28 pb-12 lg:pt-36 lg:pb-16">
       <div className="container-max">
         {/* Breadcrumb */}
         <div className="flex items-center gap-2 mb-4 text-sm">
@@ -100,7 +100,7 @@ function LegalHeader() {
 
 export default function LegalLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-surface-off pt-20">
+    <div className="min-h-screen bg-surface-off">
       <LegalHeader />
 
       <div className="container-max py-12">

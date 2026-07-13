@@ -149,12 +149,8 @@ export default function CorporateHero() {
                 transition={{ delay: 0.5, duration: 0.6 }}
                 className="absolute top-10 right-4 bg-navy-deep/90 backdrop-blur-md border border-white/15 rounded-xl p-4 shadow-md max-w-[180px] hidden sm:block"
               >
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="w-2 h-2 rounded-full bg-lime" />
-                  <span className="text-[10px] font-bold text-white uppercase tracking-wider">Ecosystem Ops</span>
-                </div>
-                <p className="text-[20px] font-extrabold text-lime font-display leading-none">25+</p>
-                <p className="text-[10px] text-text-on-dark-muted mt-1 leading-snug">Salon Partners onboarded in Trichy</p>
+                <p className="text-[32px] font-extrabold text-lime font-display leading-none">25+</p>
+                <p className="text-[12px] text-text-on-dark-soft font-medium mt-1.5 leading-snug">Salon Partners onboarded in Trichy</p>
               </motion.div>
 
             </motion.div>

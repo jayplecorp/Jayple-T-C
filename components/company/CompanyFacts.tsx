@@ -123,7 +123,12 @@ export default function CompanyFacts() {
               className="bg-white border border-surface-border rounded-2xl p-6 sm:p-8 flex flex-col justify-between"
             >
               <div>
-                <span className="text-[32px] block mb-4" aria-hidden="true">📱</span>
+                <div className="w-12 h-12 rounded-xl bg-lime/10 flex items-center justify-center mb-6 shrink-0" aria-hidden="true">
+                  <svg className="w-6 h-6 text-lime-dark" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                    <path d="M12 18h.01" />
+                  </svg>
+                </div>
                 <h3 className="font-display font-bold text-xl text-navy mb-3">For Customers</h3>
                 <p className="text-sm sm:text-base text-text-soft leading-relaxed mb-6">
                   Users access the Jayple application or website to discover participating local salons, explore detailed catalog service lists, and schedule grooming treatment appointments cleanly.
@@ -148,7 +153,14 @@ export default function CompanyFacts() {
               className="bg-white border border-surface-border rounded-2xl p-6 sm:p-8 flex flex-col justify-between"
             >
               <div>
-                <span className="text-[32px] block mb-4" aria-hidden="true">💈</span>
+                <div className="w-12 h-12 rounded-xl bg-lime/10 flex items-center justify-center mb-6 shrink-0" aria-hidden="true">
+                  <svg className="w-6 h-6 text-lime-dark" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                    <circle cx="6" cy="6" r="3" />
+                    <circle cx="6" cy="18" r="3" />
+                    <line x1="9.8" y1="8.2" x2="20" y2="17" />
+                    <line x1="9.8" y1="15.8" x2="20" y2="7" />
+                  </svg>
+                </div>
                 <h3 className="font-display font-bold text-xl text-navy mb-3">For Salon Partners</h3>
                 <p className="text-sm sm:text-base text-text-soft leading-relaxed mb-6">
                   Participating salon businesses leverage the Partner platform to manage styling appointments, update treatments list, and coordinate scheduling calendars dynamically.

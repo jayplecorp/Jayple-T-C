@@ -6,24 +6,41 @@ import { fadeUp, TRANSITION_DEFAULT } from '@/lib/tokens'
 import { companyData } from '@/lib/companyData'
 
 interface ValuePillar {
-  icon: string
+  icon: React.ReactNode
   title: string
   description: string
 }
 
 const valuePillars: ValuePillar[] = [
   {
-    icon: '📱',
+    icon: (
+      <svg className="w-6 h-6 text-lime-dark" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+        <path d="M12 18h.01" />
+      </svg>
+    ),
     title: 'Digital Discoverability',
     description: 'Provide clients with a clean web and mobile representation of your salon, listing operating hours, address, and styling images.'
   },
   {
-    icon: '📋',
+    icon: (
+      <svg className="w-6 h-6 text-lime-dark" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2" />
+        <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+      </svg>
+    ),
     title: 'Catalog Organization',
     description: 'Display your complete list of grooming treatments, pricing variations, and time durations clearly, reducing catalog confusion.'
   },
   {
-    icon: '📅',
+    icon: (
+      <svg className="w-6 h-6 text-lime-dark" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+        <line x1="16" y1="2" x2="16" y2="6" />
+        <line x1="8" y1="2" x2="8" y2="6" />
+        <line x1="3" y1="10" x2="21" y2="10" />
+      </svg>
+    ),
     title: 'Slot Coordination',
     description: 'Coordinate appointments through digital slot booking to manage flow and reduce manual call scheduling workload.'
   }
@@ -86,9 +103,9 @@ export default function PartnerValue() {
                 transition={{ ...TRANSITION_DEFAULT, delay: idx * 0.1 }}
                 className="bg-surface-off border border-surface-border rounded-2xl p-6 sm:p-8"
               >
-                <span className="text-3xl block mb-5" role="img" aria-hidden="true">
+                <div className="w-12 h-12 rounded-xl bg-lime/10 flex items-center justify-center mb-6 shrink-0">
                   {pillar.icon}
-                </span>
+                </div>
                 <h3 className="font-display font-bold text-lg text-navy mb-3">
                   {pillar.title}
                 </h3>

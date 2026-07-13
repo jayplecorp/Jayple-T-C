@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         
         {/* Top Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-10">
           
           {/* Brand & Description (spans 2 columns on large screen) */}
           <div className="col-span-2 flex flex-col pr-0 lg:pr-8">
@@ -74,13 +74,32 @@ export default function Footer() {
             </div>
           ))}
 
-          {/* Legal / Policy links column */}
+          {/* Customer Legal Links */}
           <div className="col-span-1">
             <h3 className="text-xs font-bold uppercase tracking-widest text-white mb-5">
-              Legal
+              Customer Legal
             </h3>
             <ul className="space-y-3">
-              {footerLegalLinks.map((item) => (
+              {footerLegalLinks.slice(0, 5).map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-sm text-text-on-dark-muted hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-lime rounded"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Partner Legal Links */}
+          <div className="col-span-1">
+            <h3 className="text-xs font-bold uppercase tracking-widest text-white mb-5">
+              Partner Legal
+            </h3>
+            <ul className="space-y-3">
+              {footerLegalLinks.slice(5).map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}

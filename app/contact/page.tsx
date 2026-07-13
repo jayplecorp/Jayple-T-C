@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-surface-off pt-20">
-      <section className="bg-hero-gradient section-padding">
+    <div className="min-h-screen bg-surface-off">
+      <section className="bg-hero-gradient pt-32 pb-20 lg:pt-40 lg:pb-28">
         <div className="container-max text-center">
           <span className="text-xs font-bold uppercase tracking-widest text-lime/70 mb-4 block">Get in Touch</span>
           <h1 className="font-display text-display-xl text-white mb-5">Contact us</h1>
@@ -27,21 +27,38 @@ export default function ContactPage() {
           <div className="space-y-5">
             {[
               {
-                icon: '🎧',
+                icon: (
+                  <svg className="w-6 h-6 text-lime-dark" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path d="M3 18v-6a9 9 0 0118 0v6" />
+                    <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z" />
+                  </svg>
+                ),
                 title: 'Customer Support',
                 email: companyData.officialEmail,
                 desc: 'Get help with your customer account setup, booking inquiries, or refund requests.',
                 action: { label: 'Email Support', href: `mailto:${companyData.officialEmail}` }
               },
               {
-                icon: '💈',
+                icon: (
+                  <svg className="w-6 h-6 text-lime-dark" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                    <circle cx="6" cy="6" r="3" />
+                    <circle cx="6" cy="18" r="3" />
+                    <line x1="9.8" y1="8.2" x2="20" y2="17" />
+                    <line x1="9.8" y1="15.8" x2="20" y2="7" />
+                  </svg>
+                ),
                 title: 'Salon Partner Enquiries',
                 email: companyData.businessEmail,
                 desc: 'Find out how to list your salon treatments and coordinate calendars on our platform.',
                 action: { label: 'Email Partner Success', href: `mailto:${companyData.businessEmail}` }
               },
               {
-                icon: '✉️',
+                icon: (
+                  <svg className="w-6 h-6 text-lime-dark" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <path d="M22 6l-10 7L2 6" />
+                  </svg>
+                ),
                 title: 'General & Media Queries',
                 email: companyData.businessEmail,
                 desc: 'For business collaborations, official correspondence, or press/media inquiries.',
@@ -49,7 +66,9 @@ export default function ContactPage() {
               },
             ].map(({ icon, title, desc, action }) => (
               <div key={title} className="bg-white border border-surface-border rounded-2xl p-6 flex gap-4">
-                <div className="text-3xl shrink-0" aria-hidden="true">{icon}</div>
+                <div className="w-12 h-12 rounded-xl bg-lime/10 flex items-center justify-center shrink-0" aria-hidden="true">
+                  {icon}
+                </div>
                 <div className="flex flex-col justify-between">
                   <div>
                     <h3 className="font-display font-bold text-base text-navy mb-1">{title}</h3>
@@ -76,15 +95,23 @@ export default function ContactPage() {
               
               <div className="space-y-4 border-t border-white/10 pt-6">
                 <div className="flex items-center gap-3 text-sm text-text-on-dark-soft">
-                  <span className="text-lime" aria-hidden="true">✉️</span> 
+                  <svg className="w-4 h-4 text-lime shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <path d="M22 6l-10 7L2 6" />
+                  </svg>
                   <span>{companyData.businessEmail}</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-text-on-dark-soft">
-                  <span className="text-lime" aria-hidden="true">📞</span> 
+                  <svg className="w-4 h-4 text-lime shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
                   <span>{companyData.officialPhone}</span>
                 </div>
                 <div className="flex items-start gap-3 text-sm text-text-on-dark-soft">
-                  <span className="text-lime" aria-hidden="true">📍</span> 
+                  <svg className="w-4 h-4 text-lime shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
                   <span>Current Service Market: Trichy, Tamil Nadu</span>
                 </div>
               </div>
