@@ -139,7 +139,7 @@ export const teamData: {
       initials: 'GS',
     },
     {
-      name: 'Karupasami S',
+      name: 'Karuppasami S',
       role: 'Marketing Team',
       bio: "Contributing creative and market-focused ideas to strengthen Jayple's presence.",
       photo: '/images/team/karuppasami.webp',
@@ -148,7 +148,7 @@ export const teamData: {
   ],
   partnerSuccess: [
     {
-      name: 'Sanjay S',
+      name: 'Sanjai S',
       role: 'Partner Success',
       bio: "Connecting with salon businesses and supporting valuable partnerships within the Jayple network.",
       photo: '/images/team/sanjai.webp',

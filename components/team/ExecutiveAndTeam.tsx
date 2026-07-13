@@ -238,10 +238,10 @@ export default function ExecutiveAndTeam() {
           <div className="space-y-16">
             {departments.map((dept, deptIdx) => (
               <div key={dept.id} className="border-t border-surface-border pt-12 first:border-0 first:pt-0">
-                <div className="grid lg:grid-cols-12 gap-8 items-start">
+                <div className="space-y-8">
                   
                   {/* Department Info */}
-                  <div className="lg:col-span-4 space-y-3">
+                  <div className="max-w-3xl">
                     <motion.div
                       initial="hidden"
                       whileInView="visible"
@@ -249,64 +249,62 @@ export default function ExecutiveAndTeam() {
                       variants={fadeUp}
                       transition={TRANSITION_DEFAULT}
                     >
-                      <h3 className="font-display font-bold text-lg sm:text-xl text-navy">
+                      <h3 className="font-display font-bold text-xl sm:text-2xl text-navy">
                         {dept.name}
                       </h3>
-                      <p className="text-xs sm:text-sm text-text-soft mt-3 leading-relaxed">
+                      <p className="text-xs sm:text-sm text-text-soft mt-2 leading-relaxed">
                         {dept.description}
                       </p>
                     </motion.div>
                   </div>
 
                   {/* Department Grid of Members */}
-                  <div className="lg:col-span-8">
-                    <motion.ul
-                      initial="hidden"
-                      whileInView="visible"
-                      viewport={{ once: true, margin: '-60px' }}
-                      variants={staggerContainer}
-                      className="grid sm:grid-cols-2 gap-4"
-                    >
-                      {dept.members.map((member, memberIdx) => {
-                        // Derive initials correctly from public name
-                        const derivedInitials = member.initials || member.name.split(' ').map(n => n[0]).join('')
-                        
-                        return (
-                          <motion.li
-                            key={member.name}
-                            variants={fadeUp}
-                            transition={TRANSITION_DEFAULT}
-                            className="bg-surface-off border border-surface-border rounded-2xl p-6 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-5 hover:border-lime/40 transition-colors"
-                          >
-                            {/* Photo or Initials Fallback Avatar */}
-                            {member.photo ? (
-                              <div className="relative w-32 h-32 rounded-2xl overflow-hidden border border-surface-border shrink-0 bg-surface-warm">
-                                <Image
-                                  src={member.photo}
-                                  alt={member.name}
-                                  fill
-                                  sizes="128px"
-                                  className="object-cover object-center"
-                                />
-                              </div>
-                            ) : (
-                              <div className="w-32 h-32 rounded-2xl bg-navy/5 border border-surface-border flex items-center justify-center font-display font-extrabold text-4xl text-navy shrink-0 select-none">
-                                {derivedInitials}
-                              </div>
-                            )}
-                            <div className="min-w-0">
-                              <h4 className="font-bold text-[17px] text-navy truncate">
-                                {member.name}
-                              </h4>
-                              <p className="text-xs sm:text-sm text-text-soft mt-1">
-                                {member.role}
-                              </p>
+                  <motion.ul
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: '-60px' }}
+                    variants={staggerContainer}
+                    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+                  >
+                    {dept.members.map((member, memberIdx) => {
+                      // Derive initials correctly from public name
+                      const derivedInitials = member.initials || member.name.split(' ').map(n => n[0]).join('')
+                      
+                      return (
+                        <motion.li
+                          key={member.name}
+                          variants={fadeUp}
+                          transition={TRANSITION_DEFAULT}
+                          className="bg-surface-off border border-surface-border rounded-2xl p-5 flex flex-col items-center text-center hover:border-lime/40 transition-colors"
+                        >
+                          {/* Photo or Initials Fallback Avatar */}
+                          {member.photo ? (
+                            <div className="relative w-3/4 aspect-square rounded-xl overflow-hidden mb-4 bg-surface-warm border border-surface-border shrink-0 mx-auto">
+                              <Image
+                                src={member.photo}
+                                alt={member.name}
+                                fill
+                                sizes="(max-width: 640px) 100vw, 200px"
+                                className="object-cover object-center"
+                              />
                             </div>
-                          </motion.li>
-                        )
-                      })}
-                    </motion.ul>
-                  </div>
+                          ) : (
+                            <div className="relative w-3/4 aspect-square rounded-xl bg-navy/5 border border-surface-border flex items-center justify-center font-display font-extrabold text-3xl text-navy shrink-0 mb-4 mx-auto select-none">
+                              {derivedInitials}
+                            </div>
+                          )}
+                          <div className="min-w-0">
+                            <h4 className="font-bold text-[15px] sm:text-[16px] text-navy">
+                              {member.name}
+                            </h4>
+                            <p className="text-[11px] sm:text-xs text-text-soft mt-1">
+                              {member.role}
+                            </p>
+                          </div>
+                        </motion.li>
+                      )
+                    })}
+                  </motion.ul>
 
                 </div>
               </div>
