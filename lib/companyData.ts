@@ -22,7 +22,7 @@ export const companyData = {
     },
     partner: {
       android: 'https://play.google.com/store/apps/details?id=com.jayple.vendor',
-      ios: '', // Not yet supplied in Module 0
+      ios: 'https://apps.apple.com/in/app/jayple-partner/id6779543060',
     },
   },
 
@@ -64,14 +64,14 @@ export const teamData: {
   founders: [
     {
       name: 'Jayaprakash Thangavel',
-      role: 'Founder',
+      role: 'Founder & CEO',
       bio: "Leading Jayple's vision and shaping ideas into meaningful digital experiences.",
       photo: '/images/team/jayaprakash.webp',
       initials: 'JP',
     },
     {
       name: 'Allwin E',
-      role: 'Co-Founder',
+      role: 'Co-Founder & COO',
       bio: "Supporting Jayple's direction through collaboration, strategy, and a shared vision for growth.",
       photo: '/images/team/allwin.webp',
       initials: 'AW',
@@ -96,7 +96,7 @@ export const teamData: {
       name: 'Vidyasri R',
       role: 'HR',
       bio: "Supporting Jayple's communication, partner coordination, and growing work culture.",
-      photo: null,
+      photo: '/images/team/vidyasri.webp',
       initials: 'VR',
     },
   ],
@@ -126,7 +126,7 @@ export const teamData: {
       name: 'Ashwin S',
       role: 'Software Developer',
       bio: "Contributing to the development and continuous improvement of Jayple's technology platforms.",
-      photo: null,
+      photo: '/images/team/ashwin.webp',
       initials: 'AS',
     },
   ],

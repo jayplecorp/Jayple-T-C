@@ -6,8 +6,8 @@ import { fadeUp, TRANSITION_DEFAULT } from '@/lib/tokens'
 import { teamData } from '@/lib/companyData'
 
 export default function IdeaGrowth() {
-  const founderName = teamData.founders.find(f => f.role === 'Founder')?.name?.split(' ')[0] || 'Jayaprakash'
-  const coFounderName = teamData.founders.find(f => f.role === 'Co-Founder')?.name?.split(' ')[0] || 'Allwin'
+  const founderName = teamData.founders.find(f => f.role === 'Founder & CEO')?.name?.split(' ')[0] || 'Jayaprakash'
+  const coFounderName = teamData.founders.find(f => f.role === 'Co-Founder & COO')?.name?.split(' ')[0] || 'Allwin'
 
   return (
     <section className="section-padding bg-surface-off text-text" aria-labelledby="idea-growth-heading">

@@ -7,8 +7,8 @@ import { fadeUp, TRANSITION_DEFAULT } from '@/lib/tokens'
 import { teamData } from '@/lib/companyData'
 
 export default function AboutProblem() {
-  const founderName = teamData.founders.find(f => f.role === 'Founder')?.name || 'Jayaprakash Thangavel'
-  const coFounderName = teamData.founders.find(f => f.role === 'Co-Founder')?.name || 'Allwin E'
+  const founderName = teamData.founders.find(f => f.role === 'Founder & CEO')?.name || 'Jayaprakash Thangavel'
+  const coFounderName = teamData.founders.find(f => f.role === 'Co-Founder & COO')?.name || 'Allwin E'
 
   return (
     <section className="section-padding bg-white text-text" aria-labelledby="problem-heading">
@@ -61,12 +61,12 @@ export default function AboutProblem() {
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               className="bg-surface-off border border-surface-border rounded-2xl p-6 shadow-sm relative overflow-hidden"
             >
-              <div className="relative rounded-xl overflow-hidden aspect-[4/3] mb-5 bg-surface-warm border border-surface-border">
+              <div className="relative rounded-xl overflow-hidden aspect-[3/4] mb-5 bg-surface-warm border border-surface-border">
                 <Image
                   src="/images/team/jayaprakash.webp"
                   alt="Founder Jayaprakash Thangavel"
-                  width={600}
-                  height={450}
+                  width={800}
+                  height={1067}
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />

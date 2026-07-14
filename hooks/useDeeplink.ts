@@ -46,7 +46,10 @@ function getPlatform(): 'ios' | 'android' | 'desktop' {
 function handleAppRedirect() {
   const platform = getPlatform()
 
-  if (platform === 'desktop') return // Desktop: show normal website
+  if (platform === 'desktop') {
+    window.open(PLAY_STORE_URL, '_blank', 'noopener,noreferrer')
+    return
+  }
 
   if (platform === 'android') {
     // Android Intent URL — opens the app if installed, otherwise does nothing.
@@ -105,7 +108,7 @@ export function getStoreUrl(): string {
   const platform = getPlatform()
   if (platform === 'ios') return APP_STORE_URL
   if (platform === 'android') return PLAY_STORE_URL
-  return '#get-app' // Desktop: scroll to CTA section
+  return PLAY_STORE_URL // Desktop: open Play Store page
 }
 
 /* ── React hook ─────────────────────────────────────── */

@@ -35,7 +35,7 @@ export default function AboutHero() {
           <span className="text-lime font-medium">About Jayple</span>
         </div>
 
-        <div className="max-w-4xl">
+        <div className="max-w-5xl">
           {/* Eyebrow Label */}
           <motion.span
             initial={{ opacity: 0, y: 10 }}
@@ -61,7 +61,7 @@ export default function AboutHero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: EASE }}
-            className="text-base sm:text-lg text-text-on-dark-soft/90 leading-relaxed max-w-2xl"
+            className="text-base sm:text-lg text-text-on-dark-soft/90 leading-relaxed max-w-3xl"
           >
             Jayple began from salon-related friction personally experienced and observed during college. What started as a question about making salon discovery and booking easier gradually developed into a larger idea connecting customers and salon businesses through digital experiences.
           </motion.p>

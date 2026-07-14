@@ -71,23 +71,23 @@ export default function PartnerAppSection() {
             </div>
 
             {/* Right Action Column */}
-            <div className="lg:col-span-6 flex flex-col justify-center items-center bg-surface-off border border-surface-border rounded-3xl p-8 sm:p-12">
+            <div className="lg:col-span-6 flex flex-col justify-center items-center bg-navy border border-white/10 rounded-3xl p-8 sm:p-12">
               <motion.div
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: '-60px' }}
                 variants={fadeUp}
                 transition={{ ...TRANSITION_DEFAULT, delay: 0.15 }}
-                className="text-center space-y-6 w-full max-w-sm"
+                className="text-center space-y-6 w-full"
               >
                 <span className="text-xs font-bold text-lime uppercase tracking-widest block">
                   Download Partner App
                 </span>
-                <p className="text-sm text-text-soft leading-relaxed">
-                  Access partner tools directly. Install the Salon Partner application on supported Android systems.
+                <p className="text-sm text-white/70 leading-relaxed">
+                  Access partner tools directly. Install the Salon Partner application on Android or iOS.
                 </p>
                 
-                {/* Embedded central store app action buttons (iOS is hidden via props) */}
+                {/* Embedded central store app action buttons */}
                 <div className="flex flex-col items-center gap-4 pt-2">
                   <AppStoreActions type="partner" />
                 </div>

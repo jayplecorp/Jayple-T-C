@@ -7,17 +7,17 @@ import { fadeUp, TRANSITION_DEFAULT } from '@/lib/tokens'
 import { teamData } from '@/lib/companyData'
 
 export default function FoundingLeadership() {
-  const founder = teamData.founders.find(m => m.role === 'Founder') || {
+  const founder = teamData.founders.find(m => m.role === 'Founder & CEO') || {
     name: 'Jayaprakash Thangavel',
-    role: 'Founder',
+    role: 'Founder & CEO',
     bio: "Leading Jayple's vision and shaping ideas into meaningful digital experiences.",
     photo: '/images/team/jayaprakash.webp',
     initials: 'JP'
   }
   
-  const coFounder = teamData.founders.find(m => m.role === 'Co-Founder') || {
+  const coFounder = teamData.founders.find(m => m.role === 'Co-Founder & COO') || {
     name: 'Allwin E',
-    role: 'Co-Founder',
+    role: 'Co-Founder & COO',
     bio: "Supporting Jayple's direction through collaboration, strategy, and a shared vision for growth.",
     photo: '/images/team/allwin.webp',
     initials: 'AW'
