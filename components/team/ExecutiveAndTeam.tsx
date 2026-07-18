@@ -11,21 +11,27 @@ export default function ExecutiveAndTeam() {
     name: 'Janarthanan A',
     role: 'Chief Technology Officer (CTO)',
     bio: "Leading Jayple's technology direction and helping shape the systems and products behind the platform.",
-    initials: 'JA'
+    photo: '/images/team/janarthanan.webp',
+    initials: 'JA',
+    linkedin: 'https://www.linkedin.com/in/janarthanan-a-3552b22a3?utm_source=share_via&utm_content=profile&utm_medium=member_android'
   }
 
   const cfo = teamData.leadership.find(m => m.role.includes('Finance')) || {
     name: 'Dharsan Thangarasu',
     role: 'Chief Finance Officer (CFO)',
     bio: "Supporting Jayple's financial direction and helping the company build towards responsible and sustainable growth.",
-    initials: 'DT'
+    photo: '/images/team/dharsan.webp',
+    initials: 'DT',
+    linkedin: 'https://www.linkedin.com/in/dharsan-thangarasu-3162b32a3?utm_source=share_via&utm_content=profile&utm_medium=member_android'
   }
 
   const hr = teamData.leadership.find(m => m.role.includes('HR')) || {
     name: 'Vidyasri R',
     role: 'HR',
     bio: "Supporting Jayple's communication, partner coordination, and growing work culture.",
-    initials: 'VR'
+    photo: '/images/team/vidyasri.webp',
+    initials: 'VR',
+    linkedin: 'https://www.linkedin.com/in/vidyasriravikumar06?utm_source=share_via&utm_content=profile&utm_medium=member_android'
   }
 
   // Get active department groups, filtering out founders and CTO/CFO from the general list
@@ -100,7 +106,7 @@ export default function ExecutiveAndTeam() {
               viewport={{ once: true, margin: '-60px' }}
               variants={fadeUp}
               transition={TRANSITION_DEFAULT}
-              className="bg-white border border-surface-border rounded-2xl p-6 sm:p-8 flex flex-col items-start"
+              className="bg-white border border-surface-border rounded-2xl p-6 sm:p-8 flex flex-col items-start group"
             >
               {/* Photo or Premium Initials Avatar Fallback */}
               {cto.photo ? (
@@ -109,7 +115,7 @@ export default function ExecutiveAndTeam() {
                     src={cto.photo}
                     alt={`${cto.name}`}
                     fill
-                    className="object-cover object-center"
+                    className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
               ) : (
@@ -125,9 +131,22 @@ export default function ExecutiveAndTeam() {
               <h3 className="font-display font-bold text-xl text-navy mb-4">
                 {cto.name}
               </h3>
-              <p className="text-sm text-text-soft leading-relaxed flex-1">
+              <p className="text-sm text-text-soft leading-relaxed flex-1 mb-6">
                 {cto.bio}
               </p>
+              {cto.linkedin && (
+                <a
+                  href={cto.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 border border-surface-border bg-white rounded-xl text-xs font-semibold text-navy hover:text-[#0077b5] hover:border-[#0077b5]/30 hover:bg-surface-off shadow-sm hover:shadow transition-all duration-200"
+                >
+                  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                  View LinkedIn
+                </a>
+              )}
             </motion.div>
 
             {/* CFO Card */}
@@ -137,7 +156,7 @@ export default function ExecutiveAndTeam() {
               viewport={{ once: true, margin: '-60px' }}
               variants={fadeUp}
               transition={{ ...TRANSITION_DEFAULT, delay: 0.15 }}
-              className="bg-white border border-surface-border rounded-2xl p-6 sm:p-8 flex flex-col items-start"
+              className="bg-white border border-surface-border rounded-2xl p-6 sm:p-8 flex flex-col items-start group"
             >
               {/* Photo or Premium Initials Avatar Fallback */}
               {cfo.photo ? (
@@ -146,7 +165,7 @@ export default function ExecutiveAndTeam() {
                     src={cfo.photo}
                     alt={`${cfo.name}`}
                     fill
-                    className="object-cover object-center"
+                    className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
               ) : (
@@ -162,9 +181,22 @@ export default function ExecutiveAndTeam() {
               <h3 className="font-display font-bold text-xl text-navy mb-4">
                 {cfo.name}
               </h3>
-              <p className="text-sm text-text-soft leading-relaxed flex-1">
+              <p className="text-sm text-text-soft leading-relaxed flex-1 mb-6">
                 {cfo.bio}
               </p>
+              {cfo.linkedin && (
+                <a
+                  href={cfo.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 border border-surface-border bg-white rounded-xl text-xs font-semibold text-navy hover:text-[#0077b5] hover:border-[#0077b5]/30 hover:bg-surface-off shadow-sm hover:shadow transition-all duration-200"
+                >
+                  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                  View LinkedIn
+                </a>
+              )}
             </motion.div>
 
             {/* HR Card */}
@@ -174,7 +206,7 @@ export default function ExecutiveAndTeam() {
               viewport={{ once: true, margin: '-60px' }}
               variants={fadeUp}
               transition={{ ...TRANSITION_DEFAULT, delay: 0.3 }}
-              className="bg-white border border-surface-border rounded-2xl p-6 sm:p-8 flex flex-col items-start"
+              className="bg-white border border-surface-border rounded-2xl p-6 sm:p-8 flex flex-col items-start group"
             >
               {/* Photo or Premium Initials Avatar Fallback */}
               {hr.photo ? (
@@ -183,7 +215,7 @@ export default function ExecutiveAndTeam() {
                     src={hr.photo}
                     alt={`${hr.name}`}
                     fill
-                    className="object-cover object-center"
+                    className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
               ) : (
@@ -199,9 +231,22 @@ export default function ExecutiveAndTeam() {
               <h3 className="font-display font-bold text-xl text-navy mb-4">
                 {hr.name}
               </h3>
-              <p className="text-sm text-text-soft leading-relaxed flex-1">
+              <p className="text-sm text-text-soft leading-relaxed flex-1 mb-6">
                 {hr.bio}
               </p>
+              {hr.linkedin && (
+                <a
+                  href={hr.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 border border-surface-border bg-white rounded-xl text-xs font-semibold text-navy hover:text-[#0077b5] hover:border-[#0077b5]/30 hover:bg-surface-off shadow-sm hover:shadow transition-all duration-200"
+                >
+                  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                  View LinkedIn
+                </a>
+              )}
             </motion.div>
 
           </div>
@@ -275,7 +320,7 @@ export default function ExecutiveAndTeam() {
                           key={member.name}
                           variants={fadeUp}
                           transition={TRANSITION_DEFAULT}
-                          className="bg-surface-off border border-surface-border rounded-2xl p-5 flex flex-col items-center text-center hover:border-lime/40 transition-colors"
+                          className="bg-surface-off border border-surface-border rounded-2xl p-5 flex flex-col items-center text-center hover:border-lime/40 transition-colors group relative"
                         >
                           {/* Photo or Initials Fallback Avatar */}
                           {member.photo ? (
@@ -285,7 +330,7 @@ export default function ExecutiveAndTeam() {
                                 alt={member.name}
                                 fill
                                 sizes="(max-width: 640px) 100vw, 200px"
-                                className="object-cover object-center"
+                                className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
                               />
                             </div>
                           ) : (
@@ -293,13 +338,26 @@ export default function ExecutiveAndTeam() {
                               {derivedInitials}
                             </div>
                           )}
-                          <div className="min-w-0">
+                          <div className="min-w-0 flex flex-col items-center">
                             <h4 className="font-bold text-[15px] sm:text-[16px] text-navy">
                               {member.name}
                             </h4>
                             <p className="text-[11px] sm:text-xs text-text-soft mt-1">
                               {member.role}
                             </p>
+                            {member.linkedin && (
+                              <a
+                                href={member.linkedin}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1.5 mt-3 text-[11px] font-semibold text-navy hover:text-[#0077b5] transition-colors border border-surface-border bg-white px-2.5 py-1 rounded-md shadow-sm hover:shadow"
+                              >
+                                <svg className="w-3 h-3 fill-current" viewBox="0 0 24 24">
+                                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
+                                LinkedIn
+                              </a>
+                            )}
                           </div>
                         </motion.li>
                       )
