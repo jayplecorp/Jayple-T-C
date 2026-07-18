@@ -72,10 +72,11 @@ export default function Navbar() {
 
   const isGroupActive = (group: NavigationGroup) => {
     return group.items.some(item => {
+      const [path] = item.href.split('#')
       if (item.href.startsWith('/#')) {
         return pathname === '/'
       }
-      return pathname === item.href
+      return pathname === path || pathname === path + '/'
     })
   }
 
@@ -122,7 +123,7 @@ export default function Navbar() {
                     aria-expanded={isOpen}
                     aria-haspopup="true"
                     className={`px-4 py-2 text-sm font-medium rounded-md transition-colors flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-2 focus-visible:ring-offset-navy ${
-                      isActive ? 'text-white font-semibold' : 'text-white/80 hover:text-white'
+                      isActive ? 'text-lime font-semibold' : 'text-white/80 hover:text-white'
                     } ${isOpen ? 'bg-white/05 text-white' : 'hover:bg-white/03'}`}
                   >
                     {group.label}
@@ -147,32 +148,46 @@ export default function Navbar() {
                         className="absolute left-0 mt-2 w-80 bg-navy-mid border border-white/08 rounded-xl shadow-lg p-3 z-50 overflow-hidden"
                       >
                         <div className="flex flex-col gap-1">
-                          {group.items.map((item) => (
-                            <Link
-                              key={item.href}
-                              href={item.href}
-                              onClick={() => setActiveDropdown(null)}
-                              className="group flex flex-col p-3 rounded-lg hover:bg-white/05 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime"
-                            >
-                              <span className="text-sm font-semibold text-white group-hover:text-lime transition-colors flex items-center gap-1">
-                                {item.label}
-                                <svg
-                                  className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all"
-                                  viewBox="0 0 24 24"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  strokeWidth="2.5"
-                                >
-                                  <path d="M5 12h14M12 5l7 7-7 7" />
-                                </svg>
-                              </span>
-                              {item.description && (
-                                <span className="text-xs text-text-on-dark-muted mt-1 leading-relaxed">
-                                  {item.description}
+                          {group.items.map((item) => {
+                            const isItemActive = (() => {
+                              const [path] = item.href.split('#')
+                              if (item.href.startsWith('/#')) return pathname === '/'
+                              return pathname === path || pathname === path + '/'
+                            })()
+
+                            return (
+                              <Link
+                                key={item.href}
+                                href={item.href}
+                                onClick={() => setActiveDropdown(null)}
+                                className={`group flex flex-col p-3 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime ${
+                                  isItemActive ? 'bg-white/05' : 'hover:bg-white/05'
+                                }`}
+                              >
+                                <span className={`text-sm font-semibold transition-colors flex items-center gap-1 ${
+                                  isItemActive ? 'text-lime' : 'text-white group-hover:text-lime'
+                                }`}>
+                                  {item.label}
+                                  <svg
+                                    className={`w-3.5 h-3.5 transition-all ${
+                                      isItemActive ? 'opacity-100 translate-x-0 text-lime' : 'opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0'
+                                    }`}
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2.5"
+                                  >
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                  </svg>
                                 </span>
-                              )}
-                            </Link>
-                          ))}
+                                {item.description && (
+                                  <span className="text-xs text-text-on-dark-muted mt-1 leading-relaxed">
+                                    {item.description}
+                                  </span>
+                                )}
+                              </Link>
+                            )
+                          })}
                         </div>
                       </motion.div>
                     )}
@@ -186,7 +201,11 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3.5">
             <Link
               href="/partner"
-              className="text-sm font-semibold text-white/80 hover:text-white px-4 py-2 border border-white/15 rounded-lg hover:bg-white/05 hover:border-white/30 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime"
+              className={`text-sm font-semibold px-4 py-2 border rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime ${
+                pathname === '/partner' || pathname === '/partner/'
+                  ? 'bg-lime text-navy border-lime shadow-lime-sm'
+                  : 'text-white/80 hover:text-white border-white/15 hover:bg-white/05 hover:border-white/30'
+              }`}
             >
               Partner with Jayple
             </Link>
@@ -264,16 +283,28 @@ export default function Navbar() {
                       {group.label}
                     </h3>
                     <div className="flex flex-col">
-                      {group.items.map((item) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          onClick={() => setMenuOpen(false)}
-                          className="px-3 py-2.5 rounded-lg text-sm text-text-on-dark-soft hover:bg-white/05 hover:text-white transition-colors"
-                        >
-                          {item.label}
-                        </Link>
-                      ))}
+                      {group.items.map((item) => {
+                        const isItemActive = (() => {
+                          const [path] = item.href.split('#')
+                          if (item.href.startsWith('/#')) return pathname === '/'
+                          return pathname === path || pathname === path + '/'
+                        })()
+
+                        return (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            onClick={() => setMenuOpen(false)}
+                            className={`px-3 py-2.5 rounded-lg text-sm transition-colors ${
+                              isItemActive
+                                ? 'bg-white/08 text-lime font-semibold'
+                                : 'text-text-on-dark-soft hover:bg-white/05 hover:text-white'
+                            }`}
+                          >
+                            {item.label}
+                          </Link>
+                        )
+                      })}
                     </div>
                   </div>
                 ))}
@@ -290,16 +321,23 @@ export default function Navbar() {
                       ['Privacy Policy', '/privacy'],
                       ['Terms & Conditions', '/terms'],
                       ['Cancellation & Refund', '/refund-policy'],
-                    ].map(([label, href]) => (
-                      <Link
-                        key={href}
-                        href={href}
-                        onClick={() => setMenuOpen(false)}
-                        className="px-3 py-2 text-xs text-text-on-dark-muted hover:text-white transition-colors"
-                      >
-                        {label}
-                      </Link>
-                    ))}
+                    ].map(([label, href]) => {
+                      const isLegalActive = pathname === href || pathname === href + '/'
+                      return (
+                        <Link
+                          key={href}
+                          href={href}
+                          onClick={() => setMenuOpen(false)}
+                          className={`px-3 py-2 text-xs transition-colors ${
+                            isLegalActive
+                              ? 'text-lime font-semibold'
+                              : 'text-text-on-dark-muted hover:text-white'
+                          }`}
+                        >
+                          {label}
+                        </Link>
+                      )
+                    })}
                   </div>
                 </div>
               </nav>

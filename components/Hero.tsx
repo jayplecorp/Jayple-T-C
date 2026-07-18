@@ -204,8 +204,8 @@ export default function Hero() {
                   transition={{ duration: 0.8, delay: 0.15, ease: EASE }}
                 >
                   <HeroImage
-                    src="/images/hero-salon-main.png"
-                    alt="Premium luxury salon interior with professional styling"
+                    src="/images/women.webp"
+                    alt="Premium luxury styling experience"
                     className="aspect-[3/4] lg:aspect-[4/5]"
                     priority
                   />
@@ -239,8 +239,8 @@ export default function Hero() {
                   transition={{ duration: 0.8, delay: 0.3, ease: EASE }}
                 >
                   <HeroImage
-                    src="/images/hero-salon-styling.png"
-                    alt="Professional hair styling close-up"
+                    src="/images/men.webp"
+                    alt="Professional grooming and styling close-up"
                     className="aspect-square"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/50 via-transparent to-transparent" />
@@ -254,8 +254,8 @@ export default function Hero() {
                   transition={{ duration: 0.8, delay: 0.45, ease: EASE }}
                 >
                   <HeroImage
-                    src="/images/hero-salon-app.png"
-                    alt="Happy customer booking salon appointment on phone"
+                    src="/images/women.webp"
+                    alt="Happy customer enjoying professional grooming services"
                     className="aspect-square"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/50 via-transparent to-transparent" />

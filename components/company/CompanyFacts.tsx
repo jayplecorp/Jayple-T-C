@@ -135,7 +135,7 @@ export default function CompanyFacts() {
                 </p>
               </div>
               <Link
-                href="/#features"
+                href="/customer"
                 className="inline-flex items-center text-sm font-bold text-lime-dark hover:text-lime-dark/80 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded-sm w-fit"
               >
                 Explore Customer Experience

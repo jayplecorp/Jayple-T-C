@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import DeeplinkAutoRedirect from '@/components/DeeplinkAutoRedirect'
 import CorporateHero from '@/components/homepage/CorporateHero'
 import CompanyIntro from '@/components/homepage/CompanyIntro'
 import EcosystemOverview from '@/components/homepage/EcosystemOverview'
@@ -17,7 +16,6 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <DeeplinkAutoRedirect />
       
       {/* 01 — CORPORATE HERO */}
       <CorporateHero />

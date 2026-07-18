@@ -105,6 +105,13 @@ export const teamData: {
       initials: 'VR',
       linkedin: 'https://www.linkedin.com/in/vidyasriravikumar06?utm_source=share_via&utm_content=profile&utm_medium=member_android',
     },
+    {
+      name: 'Gouthem R S',
+      role: 'Marketing Head',
+      bio: "Helping Jayple communicate, connect, and build meaningful audience relationships.",
+      photo: '/images/team/gouthem.webp',
+      initials: 'GS',
+    },
   ],
   engineering: [
     {
@@ -141,13 +148,6 @@ export const teamData: {
     },
   ],
   marketing: [
-    {
-      name: 'Gouthem R S',
-      role: 'Marketing Team',
-      bio: "Helping Jayple communicate, connect, and build meaningful audience relationships.",
-      photo: '/images/team/gouthem.webp',
-      initials: 'GS',
-    },
     {
       name: 'Karuppasami S',
       role: 'Marketing Team',
@@ -200,24 +200,24 @@ export const navigationData: NavigationGroup[] = [
   {
     label: 'Platform',
     items: [
-      { label: 'For Customers', href: '/#features', description: 'Understand the Jayple customer experience.' },
+      { label: 'For Customers', href: '/customer', description: 'Understand the Jayple customer experience.' },
       { label: 'For Salon Partners', href: '/partner', description: 'Understand the salon partner ecosystem and how businesses grow.' },
-      { label: 'How Jayple Works', href: '/#how-it-works', description: 'Understand the digital salon discovery and booking journey.' },
+      { label: 'How Jayple Works', href: '/how-it-works', description: 'Understand the digital salon discovery and booking journey.' },
     ],
   },
   {
     label: 'Careers',
     items: [
       { label: 'Careers at Jayple', href: '/careers', description: "Understand Jayple's work culture and opportunities." },
-      { label: 'Internships', href: '/careers#internships', description: 'Explore current remote project-based internship opportunities.' },
+      { label: 'Internships', href: '/internships', description: 'Explore current remote project-based internship opportunities.' },
     ],
   },
   {
     label: 'Resources',
     items: [
       { label: 'Journal', href: '/blog', description: 'Insights, guides, and updates from the Jayple team.' },
-      { label: 'Security & Trust', href: '/about#security-trust', description: "Understand Jayple's approach to platform trust." },
-      { label: 'Press & Media', href: '/about#press-media', description: 'Access official company news and media resources.' },
+      { label: 'Security & Trust', href: '/security-trust', description: "Understand Jayple's approach to platform trust." },
+      { label: 'Press & Media', href: '/press-media', description: 'Access official company news and media resources.' },
       { label: 'Contact', href: '/contact', description: 'Clear contact paths for customers, businesses, and queries.' },
     ],
   },

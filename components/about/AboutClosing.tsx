@@ -14,7 +14,7 @@ const nextPaths = [
   {
     label: 'Jayple for Customers',
     description: 'Understand the salon discovery and booking experience.',
-    href: '/#features',
+    href: '/customer',
   },
   {
     label: 'Jayple for Salon Partners',

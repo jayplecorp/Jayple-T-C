@@ -50,7 +50,10 @@ export default function SecurityTrust() {
             className="lg:col-span-5 bg-surface-off border border-surface-border rounded-2xl p-8 space-y-6"
           >
             <div className="flex gap-4">
-              <span className="text-2xl shrink-0" aria-hidden="true">🔒</span>
+              <svg className="w-6 h-6 text-lime-dark shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0110 0v4" />
+              </svg>
               <div>
                 <h3 className="font-bold text-navy text-[15px] mb-1">Encrypted Data Transit</h3>
                 <p className="text-text-soft text-xs sm:text-sm leading-relaxed">
@@ -60,7 +63,10 @@ export default function SecurityTrust() {
             </div>
 
             <div className="flex gap-4 border-t border-surface-border pt-6">
-              <span className="text-2xl shrink-0" aria-hidden="true">💳</span>
+              <svg className="w-6 h-6 text-lime-dark shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+                <line x1="1" y1="10" x2="23" y2="10" />
+              </svg>
               <div>
                 <h3 className="font-bold text-navy text-[15px] mb-1">Secure Checkout Integrations</h3>
                 <p className="text-text-soft text-xs sm:text-sm leading-relaxed">
@@ -70,7 +76,9 @@ export default function SecurityTrust() {
             </div>
 
             <div className="flex gap-4 border-t border-surface-border pt-6">
-              <span className="text-2xl shrink-0" aria-hidden="true">🛡️</span>
+              <svg className="w-6 h-6 text-lime-dark shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
               <div>
                 <h3 className="font-bold text-navy text-[15px] mb-1">Independent Auditing</h3>
                 <p className="text-text-soft text-xs sm:text-sm leading-relaxed">

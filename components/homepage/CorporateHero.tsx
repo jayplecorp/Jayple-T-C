@@ -117,8 +117,8 @@ export default function CorporateHero() {
               {/* Main App Experience Block */}
               <div className="absolute top-0 left-0 w-[65%] h-[85%] rounded-2xl overflow-hidden border border-white/10 shadow-lg bg-navy-mid">
                 <img
-                  src="/images/hero-salon-app.png"
-                  alt="Customer using Jayple mobile application to view salon details"
+                  src="/images/women.webp"
+                  alt="Customer enjoying professional styling experience"
                   className="w-full h-full object-cover opacity-85"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-transparent" />
@@ -131,7 +131,7 @@ export default function CorporateHero() {
               {/* Partner Operations Block */}
               <div className="absolute bottom-0 right-0 w-[55%] h-[70%] rounded-2xl overflow-hidden border border-white/10 shadow-lg bg-navy-light">
                 <img
-                  src="/images/hero-salon-styling.png"
+                  src="/images/men.webp"
                   alt="Professional salon styling dashboard and operations"
                   className="w-full h-full object-cover opacity-80"
                 />

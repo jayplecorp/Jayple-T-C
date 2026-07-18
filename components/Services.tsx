@@ -7,35 +7,35 @@ import { onAppCTAClick } from '@/hooks/useDeeplink'
 const SERVICES = [
   {
     name: 'Haircut',
-    img: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80',
+    img: '/images/services/haircut.webp',
   },
   {
     name: 'Beard Styling',
-    img: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=400&q=80',
+    img: '/images/services/beard grooming.webp',
   },
   {
     name: 'Facial',
-    img: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=400&q=80',
+    img: '/images/services/facial.webp',
   },
   {
     name: 'Spa',
-    img: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=400&q=80',
+    img: '/images/services/massage.webp',
   },
   {
     name: 'Hair Coloring',
-    img: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=400&q=80',
+    img: '/images/services/hair colouring.webp',
   },
   {
     name: 'Bridal Makeup',
-    img: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=400&q=80',
+    img: '/images/services/bridal and groom.webp',
   },
   {
     name: 'Manicure',
-    img: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=400&q=80',
+    img: '/images/services/manicure.webp',
   },
   {
     name: 'Pedicure',
-    img: 'https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?auto=format&fit=crop&w=400&q=80',
+    img: '/images/services/pedicure.webp',
   },
 ]
 

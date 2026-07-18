@@ -53,8 +53,8 @@ export default function EcosystemEvolution() {
           >
             <div className="relative aspect-[16/10] bg-navy-mid overflow-hidden">
               <Image
-                src="/images/hero-salon-app.png"
-                alt="Jayple customer platform — salon discovery and booking interface"
+                src="/images/customer.webp"
+                alt="Jayple customer platform — mobile discovery and booking interface"
                 fill
                 className="object-cover object-top"
                 loading="lazy"
@@ -88,7 +88,7 @@ export default function EcosystemEvolution() {
           >
             <div className="relative aspect-[16/10] bg-navy-mid overflow-hidden">
               <Image
-                src="/images/hero-salon-styling.png"
+                src="/images/vendor.webp"
                 alt="Jayple Salon Partner platform — salon business management interface"
                 fill
                 className="object-cover object-top"

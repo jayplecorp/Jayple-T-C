@@ -11,8 +11,6 @@ import PurposeStatement from '@/components/about/PurposeStatement'
 import MissionVision from '@/components/about/MissionVision'
 import CompanyPrinciples from '@/components/about/CompanyPrinciples'
 import JaypleToday from '@/components/about/JaypleToday'
-import SecurityTrust from '@/components/about/SecurityTrust'
-import PressMedia from '@/components/about/PressMedia'
 import AboutClosing from '@/components/about/AboutClosing'
 
 export const metadata: Metadata = {
@@ -66,12 +64,6 @@ export default function AboutPage() {
 
       {/* 13 — JAYPLE TODAY */}
       <JaypleToday />
-
-      {/* 14 — SECURITY & TRUST */}
-      <SecurityTrust />
-
-      {/* 15 — PRESS & MEDIA */}
-      <PressMedia />
 
       {/* 16 — THE JOURNEY CONTINUES */}
       <AboutClosing />

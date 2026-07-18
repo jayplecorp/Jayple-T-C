@@ -18,7 +18,9 @@ export default function ErrorPage({
   return (
     <div className="min-h-screen bg-surface-off flex items-center justify-center pt-20 px-6">
       <div className="max-w-md w-full bg-white border border-surface-border rounded-2xl p-8 text-center">
-        <span className="text-4xl block mb-4" aria-hidden="true">⚠️</span>
+        <svg className="w-12 h-12 text-lime-dark mx-auto mb-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
         <h1 className="font-display font-extrabold text-2xl text-navy mb-3">
           Something went wrong
         </h1>
