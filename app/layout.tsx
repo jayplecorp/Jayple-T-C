@@ -62,6 +62,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://jayple.in/' },
   icons: {
     icon: '/logo.png',
+    shortcut: '/favicon.ico',
     apple: '/logo.png',
   },
   manifest: '/manifest.json',
