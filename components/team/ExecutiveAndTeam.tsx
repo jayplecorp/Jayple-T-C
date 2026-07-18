@@ -27,8 +27,8 @@ export default function ExecutiveAndTeam() {
 
   const hr = teamData.leadership.find(m => m.role.includes('HR')) || {
     name: 'Vidyasri R',
-    role: 'HR',
-    bio: "Supporting Jayple's communication, partner coordination, and growing work culture.",
+    role: 'HR and Customer Support Head',
+    bio: "Directing human resources, customer support operations, and nurturing Jayple's workplace culture and partner experience.",
     photo: '/images/team/vidyasri.webp',
     initials: 'VR',
     linkedin: 'https://www.linkedin.com/in/vidyasriravikumar06?utm_source=share_via&utm_content=profile&utm_medium=member_android'
@@ -234,7 +234,7 @@ export default function ExecutiveAndTeam() {
                 </div>
               )}
               <span className="text-[10px] font-bold text-lime-dark uppercase tracking-widest block mb-1">
-                Human Resources · HR
+                HR & Customer Support Head
               </span>
               <h3 className="font-display font-bold text-xl text-navy mb-4">
                 {hr.name}
