@@ -44,7 +44,7 @@ export default function PartnerHero() {
           {/* Action Buttons */}
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="mailto:jayple.appointments@gmail.com"
+              href="mailto:support@jayple.in"
               className="px-8 py-4 bg-lime text-navy font-bold text-sm sm:text-base rounded-xl hover:bg-lime-bright transition-colors shadow-lime-sm"
             >
               Apply to Partner →

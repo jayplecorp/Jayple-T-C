@@ -149,7 +149,7 @@ export default function CookiePolicyPage() {
       <h2>8. Contact Us</h2>
       <p>For questions about our use of cookies:</p>
       <ul>
-        <li><strong>Email:</strong> <a href="mailto:support.jayple@gmail.com">support.jayple@gmail.com</a></li>
+        <li><strong>Email:</strong> <a href="mailto:support@jayple.in">support@jayple.in</a></li>
         <li><strong>Location:</strong> Trichy, Tamil Nadu, India (Service Availability Area)</li>
       </ul>
     </LegalDocViewer>

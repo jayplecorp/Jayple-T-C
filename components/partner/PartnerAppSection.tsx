@@ -131,10 +131,10 @@ export default function PartnerAppSection() {
 
             <div className="pt-6">
               <a
-                href="mailto:jayple.appointments@gmail.com"
+                href="mailto:support@jayple.in"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-lime text-navy font-bold text-base rounded-xl hover:bg-lime-bright transition-colors group shadow-lime-sm"
               >
-                Email us at jayple.appointments@gmail.com →
+                Email us at support@jayple.in →
               </a>
             </div>
           </motion.div>

@@ -119,10 +119,10 @@ export default function PressMedia() {
                 For official media releases, interview queries, or press coordination:
               </p>
               <a 
-                href="mailto:jayple.appointments@gmail.com" 
+                href="mailto:support@jayple.in" 
                 className="inline-flex items-center gap-2 text-sm font-bold text-lime hover:text-lime-bright transition-colors"
               >
-                jayple.appointments@gmail.com &rarr;
+                support@jayple.in &rarr;
               </a>
             </div>
 
