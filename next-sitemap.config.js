@@ -3,6 +3,7 @@ module.exports = {
   siteUrl: 'https://jayple.in',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
+  exclude: ['/c/*'],
   robotsTxtOptions: {
     policies: [
       { userAgent: '*', allow: '/' },
