@@ -5,9 +5,19 @@ export const metadata: Metadata = {
   title: '404 — Page Not Found | Jayple',
 }
 
+// Share links for codes this static site doesn't prebuild (jayple.in/c/<new code>)
+// land here on GitHub Pages; send them to the web app, which applies any code.
+const SHARE_LINK_REDIRECT = `
+  (function () {
+    var m = location.pathname.match(/^\\/c\\/([A-Za-z0-9_-]{2,30})\\/?$/);
+    if (m) location.replace('https://app.jayple.in/c/' + m[1].toLowerCase());
+  })();
+`
+
 export default function NotFoundPage() {
   return (
     <div className="min-h-screen bg-hero-gradient flex items-center justify-center text-center px-6 pt-20">
+      <script dangerouslySetInnerHTML={{ __html: SHARE_LINK_REDIRECT }} />
       <div>
         <div className="font-display text-[120px] font-extrabold text-lime/20 leading-none mb-4">404</div>
         <h1 className="font-display text-display-md text-white mb-4">Page not found</h1>

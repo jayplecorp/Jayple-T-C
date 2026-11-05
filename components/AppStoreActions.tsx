@@ -23,6 +23,22 @@ export default function AppStoreActions({
 
   return (
     <div className={`flex flex-wrap items-center gap-3.5 ${className}`}>
+      {/* Web app: book in the browser, no download (customers only) */}
+      {isCustomer && (
+        <a
+          href="https://app.jayple.in"
+          className="flex items-center flex-nowrap shrink-0 gap-3 bg-white text-[#0f172a] hover:bg-white/90 px-5 py-2.5 rounded-xl transition-all duration-200 hover:-translate-y-0.5"
+          aria-label="Book on the Jayple web app"
+        >
+          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
+          </svg>
+          <span className="text-left leading-tight shrink-0">
+            <span className="block text-[9px] font-medium uppercase tracking-wider whitespace-nowrap opacity-70">No download</span>
+            <span className="block text-xs font-bold whitespace-nowrap">Book on the web</span>
+          </span>
+        </a>
+      )}
       {/* Android Badges */}
       {hasAndroid && (
         <a

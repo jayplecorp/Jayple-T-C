@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react'
 
 const PLAY = 'https://play.google.com/store/apps/details?id=com.jayple.app'
 const APPSTORE = 'https://apps.apple.com/in/app/jayple/id6779542812'
+// The web app: same booking flow in the browser, code applied automatically.
+const WEBAPP = 'https://app.jayple.in'
 
 export default function CouponLanding({ code }: { code: string }) {
   const [os, setOs] = useState<'android' | 'ios' | 'other'>('other')
@@ -12,19 +14,16 @@ export default function CouponLanding({ code }: { code: string }) {
   const store = os === 'ios' ? APPSTORE
     : `${PLAY}&referrer=${encodeURIComponent(`utm_source=share_link&utm_campaign=${code.toLowerCase()}`)}`
 
+  const webLink = `${WEBAPP}/c/${encodeURIComponent(code.toLowerCase())}`
+
   useEffect(() => {
     const ua = navigator.userAgent || ''
     const detected = /android/i.test(ua) ? 'android' : /iphone|ipad|ipod/i.test(ua) ? 'ios' : 'other'
     setOs(detected)
-    if (detected === 'other') return
-    // Copy the code first (works only after a tap on most phones; harmless if blocked).
-    navigator.clipboard?.writeText(code).catch(() => {})
-    const t = setTimeout(() => {
-      window.location.href = detected === 'ios' ? APPSTORE
-        : `${PLAY}&referrer=${encodeURIComponent(`utm_source=share_link&utm_campaign=${code.toLowerCase()}`)}`
-    }, 2500)
-    return () => clearTimeout(t)
-  }, [code])
+    // People with the app never reach this page (App Links / Universal Links open
+    // the app). Computers go straight to the web app; phones choose below.
+    if (detected === 'other') window.location.replace(webLink)
+  }, [webLink])
 
   const copy = () => {
     navigator.clipboard?.writeText(code).then(() => setCopied(true)).catch(() => setCopied(true))
@@ -43,17 +42,19 @@ export default function CouponLanding({ code }: { code: string }) {
       <div className="text-sm mb-8" style={{ color: '#FFE3A3' }}>
         {copied ? 'Copied! Apply it in your cart.' : 'Tap to copy · apply it in your cart'}
       </div>
-      <a href={os === 'other' ? '/customer/' : store}
+      <a href={webLink}
         className="w-full max-w-sm rounded-full py-4 text-lg font-extrabold"
         style={{ background: '#F5C451', color: '#12030c' }}>
-        {os === 'ios' ? 'Get Jayple on the App Store' : os === 'android' ? 'Get Jayple on Google Play' : 'Get the Jayple app'}
+        Book now, no download
       </a>
-      {os !== 'other' && <div className="text-xs mt-4" style={{ color: 'rgba(255,255,255,.6)' }}>Taking you to the store…</div>}
-      {os === 'other' && (
-        <div className="flex gap-4 mt-4 text-sm underline" style={{ color: '#FFE3A3' }}>
-          <a href={PLAY}>Google Play</a><a href={APPSTORE}>App Store</a>
-        </div>
-      )}
+      <a href={os === 'ios' ? APPSTORE : store}
+        className="w-full max-w-sm rounded-full py-3.5 text-base font-bold mt-3"
+        style={{ border: '2px solid rgba(245,196,81,.6)', color: '#F5C451' }}>
+        {os === 'ios' ? 'Get the app on the App Store' : 'Get the app on Google Play'}
+      </a>
+      <div className="text-xs mt-4" style={{ color: 'rgba(255,255,255,.6)' }}>
+        The code is applied automatically in the web app.
+      </div>
     </div>
   )
 }
