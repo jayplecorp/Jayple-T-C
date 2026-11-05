@@ -1,8 +1,9 @@
 name: Build & Deploy to GitHub Pages
 
+# jayple.in now runs on Firebase Hosting together with the customer web app
+# (Jayple repo: scripts/build_site.sh). This GitHub Pages deploy is kept only as
+# a manual fallback.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:

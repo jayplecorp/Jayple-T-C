@@ -26,7 +26,7 @@ export default function AppStoreActions({
       {/* Web app: book in the browser, no download (customers only) */}
       {isCustomer && (
         <a
-          href="https://app.jayple.in"
+          href="/home"
           className="flex items-center flex-nowrap shrink-0 gap-3 bg-white text-[#0f172a] hover:bg-white/90 px-5 py-2.5 rounded-xl transition-all duration-200 hover:-translate-y-0.5"
           aria-label="Book on the Jayple web app"
         >
