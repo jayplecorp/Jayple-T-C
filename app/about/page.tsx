@@ -16,7 +16,7 @@ import AboutClosing from '@/components/about/AboutClosing'
 export const metadata: Metadata = {
   title: 'About Jayple | Our Story, Purpose & Technology Mission',
   description: 'Jayple Private Limited is a technology-driven company building digital experiences for salon discovery, appointment booking, and salon business participation, currently live in Trichy.',
-  alternates: { canonical: 'https://jayple.in/about/' },
+  alternates: { canonical: 'https://corporate.jayple.in/about/' },
 }
 
 export default function AboutPage() {

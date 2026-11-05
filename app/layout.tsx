@@ -20,7 +20,7 @@ const jakarta = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://jayple.in'),
+  metadataBase: new URL('https://corporate.jayple.in'),
   title: {
     default: 'Jayple — Book Salon Appointments Instantly | No Waiting in Trichy',
     template: '%s | Jayple',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://jayple.in',
+    url: 'https://corporate.jayple.in',
     siteName: 'Jayple',
     title: 'Jayple — Book Salon Appointments Instantly',
     description: 'Discover trusted salons in Trichy, compare services, book instant appointments, and earn cashback.',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
   },
-  alternates: { canonical: 'https://jayple.in/' },
+  alternates: { canonical: 'https://corporate.jayple.in/' },
   icons: {
     icon: '/logo.png',
     shortcut: '/favicon.ico',
@@ -105,8 +105,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 {
                   '@type': 'Organization',
                   name: 'Jayple',
-                  url: 'https://jayple.in',
-                  logo: 'https://jayple.in/logo.png',
+                  url: 'https://corporate.jayple.in',
+                  logo: 'https://corporate.jayple.in/logo.png',
                   sameAs: [
                     'https://www.instagram.com/jayple.in/',
                   ],
@@ -114,10 +114,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 {
                   '@type': 'WebSite',
                   name: 'Jayple',
-                  url: 'https://jayple.in',
+                  url: 'https://corporate.jayple.in',
                   potentialAction: {
                     '@type': 'SearchAction',
-                    target: 'https://jayple.in/?q={search_term_string}',
+                    target: 'https://corporate.jayple.in/?q={search_term_string}',
                     'query-input': 'required name=search_term_string',
                   },
                 },

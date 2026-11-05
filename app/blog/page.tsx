@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Blog — Salon Tips, Industry News & Jayple Updates',
   description: 'Read the latest from Jayple — grooming tips, salon business advice, product updates and more.',
-  alternates: { canonical: 'https://jayple.in/blog/' },
+  alternates: { canonical: 'https://corporate.jayple.in/blog/' },
   robots: { index: false, follow: true },
 }
 

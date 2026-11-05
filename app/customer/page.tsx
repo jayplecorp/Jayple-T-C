@@ -7,7 +7,7 @@ import CustomerAppSection from '@/components/customer/CustomerAppSection'
 export const metadata: Metadata = {
   title: 'Jayple for Customers — Zero Wait, Instant Salon Booking',
   description: 'Book trusted local salons instantly in Trichy. Discover top beauty professionals, compare pricing, schedule slots with zero wait time, and earn cashback.',
-  alternates: { canonical: 'https://jayple.in/customer/' },
+  alternates: { canonical: 'https://corporate.jayple.in/customer/' },
 }
 
 export default function CustomerPage() {

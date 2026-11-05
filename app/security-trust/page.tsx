@@ -5,7 +5,7 @@ import SecurityTrust from '@/components/about/SecurityTrust'
 export const metadata: Metadata = {
   title: 'Security & Trust — Jayple',
   description: 'Understand how Jayple protects user accounts, transaction paths, and details for both customers and salon partners.',
-  alternates: { canonical: 'https://jayple.in/security-trust/' },
+  alternates: { canonical: 'https://corporate.jayple.in/security-trust/' },
 }
 
 export default function SecurityTrustPage() {

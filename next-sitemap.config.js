@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://jayple.in',
+  siteUrl: 'https://corporate.jayple.in',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   exclude: ['/c/*'],
@@ -8,6 +8,6 @@ module.exports = {
     policies: [
       { userAgent: '*', allow: '/' },
     ],
-    additionalSitemaps: ['https://jayple.in/sitemap.xml'],
+    additionalSitemaps: ['https://corporate.jayple.in/sitemap.xml'],
   },
 }

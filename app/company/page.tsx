@@ -5,7 +5,7 @@ import CompanyFacts from '@/components/company/CompanyFacts'
 export const metadata: Metadata = {
   title: 'Company Information & Legal Identity — Jayple',
   description: 'Access official company registration disclosures, verified corporate parameters, live platform stats, and compliance files for Jayple Private Limited.',
-  alternates: { canonical: 'https://jayple.in/company/' },
+  alternates: { canonical: 'https://corporate.jayple.in/company/' },
 }
 
 export default function CompanyPage() {
@@ -17,13 +17,13 @@ export default function CompanyPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'WebPage',
-            '@id': 'https://jayple.in/company/#webpage',
-            url: 'https://jayple.in/company/',
+            '@id': 'https://corporate.jayple.in/company/#webpage',
+            url: 'https://corporate.jayple.in/company/',
             name: 'Company Information & Legal Identity — Jayple',
             description: 'Access official company registration disclosures, verified corporate parameters, live platform stats, and compliance files for Jayple Private Limited.',
             isPartOf: {
               '@type': 'WebSite',
-              '@id': 'https://jayple.in/#website',
+              '@id': 'https://corporate.jayple.in/#website',
             },
           }),
         }}

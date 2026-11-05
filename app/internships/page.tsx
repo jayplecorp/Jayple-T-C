@@ -7,7 +7,7 @@ import CareersJourney from '@/components/careers/CareersJourney'
 export const metadata: Metadata = {
   title: 'Internships — Jayple',
   description: 'Apply for remote, project-based internship opportunities at Jayple Private Limited and contribute to active platform workflows.',
-  alternates: { canonical: 'https://jayple.in/internships/' },
+  alternates: { canonical: 'https://corporate.jayple.in/internships/' },
 }
 
 export default function InternshipsPage() {

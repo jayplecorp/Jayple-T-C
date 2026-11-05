@@ -9,7 +9,7 @@ import PeopleCulture from '@/components/team/PeopleCulture'
 export const metadata: Metadata = {
   title: 'Leadership & Team — Jayple',
   description: 'Meet the founding leadership, executive officers, and operational team members building the Jayple salon discovery and booking ecosystem.',
-  alternates: { canonical: 'https://jayple.in/team/' },
+  alternates: { canonical: 'https://corporate.jayple.in/team/' },
 }
 
 export default function TeamPage() {

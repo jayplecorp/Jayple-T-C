@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     'Jayple Private Limited is a technology-driven company building digital experiences for salon discovery, appointment booking, and salon business participation, currently live in Trichy.',
   alternates: {
-    canonical: 'https://jayple.in/',
+    canonical: 'https://corporate.jayple.in/',
   },
 }
 

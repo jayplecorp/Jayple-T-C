@@ -5,7 +5,7 @@ import PressMedia from '@/components/about/PressMedia'
 export const metadata: Metadata = {
   title: 'Press & Media Resources — Jayple',
   description: 'Access the official newsroom, verified corporate parameters, fact sheet, and media assets for Jayple Private Limited.',
-  alternates: { canonical: 'https://jayple.in/press-media/' },
+  alternates: { canonical: 'https://corporate.jayple.in/press-media/' },
 }
 
 export default function PressMediaPage() {

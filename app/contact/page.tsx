@@ -5,7 +5,7 @@ import { companyData } from '@/lib/companyData'
 export const metadata: Metadata = {
   title: 'Contact Jayple — Get in Touch',
   description: 'Reach out to the Jayple team for support, partnership enquiries, or press. We\'re based in Trichy, India.',
-  alternates: { canonical: 'https://jayple.in/contact/' },
+  alternates: { canonical: 'https://corporate.jayple.in/contact/' },
 }
 
 export default function ContactPage() {

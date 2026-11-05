@@ -6,7 +6,7 @@ import CareersIntro from '@/components/careers/CareersIntro'
 export const metadata: Metadata = {
   title: 'Careers — Jayple',
   description: 'Explore opportunities, work culture, and remote project-based roles at Jayple Private Limited.',
-  alternates: { canonical: 'https://jayple.in/careers/' },
+  alternates: { canonical: 'https://corporate.jayple.in/careers/' },
 }
 
 export default function CareersPage() {
@@ -18,13 +18,13 @@ export default function CareersPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'WebPage',
-            '@id': 'https://jayple.in/careers/#webpage',
-            url: 'https://jayple.in/careers/',
+            '@id': 'https://corporate.jayple.in/careers/#webpage',
+            url: 'https://corporate.jayple.in/careers/',
             name: 'Careers — Jayple',
             description: 'Explore opportunities, work culture, and remote project-based roles at Jayple Private Limited.',
             isPartOf: {
               '@type': 'WebSite',
-              '@id': 'https://jayple.in/#website',
+              '@id': 'https://corporate.jayple.in/#website',
             },
           }),
         }}

@@ -9,7 +9,7 @@ import PartnerAppSection from '@/components/partner/PartnerAppSection'
 export const metadata: Metadata = {
   title: 'For Salon Partners — Jayple',
   description: 'Partner with Jayple to establish your salon\'s digital presence, organize service catalogs, and manage customer bookings in Trichy.',
-  alternates: { canonical: 'https://jayple.in/partner/' },
+  alternates: { canonical: 'https://corporate.jayple.in/partner/' },
 }
 
 export default function PartnerPage() {
@@ -21,13 +21,13 @@ export default function PartnerPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'WebPage',
-            '@id': 'https://jayple.in/partner/#webpage',
-            url: 'https://jayple.in/partner/',
+            '@id': 'https://corporate.jayple.in/partner/#webpage',
+            url: 'https://corporate.jayple.in/partner/',
             name: 'For Salon Partners — Jayple',
             description: 'Partner with Jayple to establish your salon\'s digital presence, organize service catalogs, and manage customer bookings in Trichy.',
             isPartOf: {
               '@type': 'WebSite',
-              '@id': 'https://jayple.in/#website',
+              '@id': 'https://corporate.jayple.in/#website',
             },
           }),
         }}
